@@ -1,0 +1,13 @@
+@import "compass";
+@import 'compass/reset';
+
+@include font-face("Orbitron Regular", font-files("orbitron-regular-webfont.eot", "orbitron-regular-webfont.svg", "orbitron-regular-webfont.ttf", "orbitron-regular-webfont.woff", "orbitron-regular-webfont.woff2"));
+
+body {
+    font: 100% "Orbitron Regular", sans-serif;
+    @include background-image(linear-gradient(to right, #3db65b, #10b8ac, #10b0bf, #1899d1));
+}
+.container {
+    width: 100%;
+    @include background(image-url("logo.png"));
+}
