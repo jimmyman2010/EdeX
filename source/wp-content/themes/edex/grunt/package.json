@@ -1,0 +1,14 @@
+{
+    "name": "edex",
+    "description": "EdeX website.",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt": "",
+        "grunt-contrib-jshint": "",
+        "grunt-contrib-uglify": "",
+        "grunt-contrib-watch": "",
+        "grunt-contrib-compass": "",
+        "grunt-contrib-csslint": "",
+        "grunt-contrib-cssmin": ""
+    }
+}
