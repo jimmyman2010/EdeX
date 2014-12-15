@@ -2137,8 +2137,8 @@ option.wpb_video {
   display: block;
   margin: 0 auto;
   top: 20px;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 .vc_pull-right {
   float: right !important;
@@ -3437,7 +3437,6 @@ select.btn-danger {
 }
 .vc_css-editor .vc_layout-onion .vc_margin .vc_border .vc_padding .vc_content i {
   margin: 8px auto;
-  background: transparent url(../vc/logo_ce.png) center center no-repeat;
   display: block;
   width: 32px;
   height: 32px;
