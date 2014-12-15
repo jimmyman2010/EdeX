@@ -1,7 +1,6 @@
 @import "compass";
 @import 'compass/reset';
-
-@include font-face("Orbitron Regular", font-files("orbitron-regular-webfont.eot", "orbitron-regular-webfont.svg", "orbitron-regular-webfont.ttf", "orbitron-regular-webfont.woff", "orbitron-regular-webfont.woff2"));
+@import 'fontface';
 
 body {
     font: 100% "Orbitron Regular", sans-serif;

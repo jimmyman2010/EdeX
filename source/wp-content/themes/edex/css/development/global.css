@@ -64,10 +64,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @font-face {
-  font-family: "Orbitron Regular";
-  src: url('/../fonts/orbitron-regular-webfont.eot?1418548573') format('embedded-opentype'), url('/../fonts/orbitron-regular-webfont.svg?1418548573') format('svg'), url('/../fonts/orbitron-regular-webfont.ttf?1418548573') format('truetype'), url('/../fonts/orbitron-regular-webfont.woff?1418548573') format('woff'), url('/../fonts/orbitron-regular-webfont.woff2?1418548573') format('woff2');
+  font-family: 'Orbitron Regular';
+  src: url("../fonts/orbitron-regular-webfont.eot");
+  src: url("../fonts/orbitron-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/orbitron-regular-webfont.woff") format("woff"), url("../fonts/orbitron-regular-webfont.ttf") format("truetype"), url("../fonts/orbitron-regular-webfont.svg#orbitronregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
-/* line 6, ../scss/global.scss */
+/* line 5, ../scss/global.scss */
 body {
   font: 100% "Orbitron Regular", sans-serif;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNkYjY1YiIvPjxzdG9wIG9mZnNldD0iMzMuMzMzMzMlIiBzdG9wLWNvbG9yPSIjMTBiOGFjIi8+PHN0b3Agb2Zmc2V0PSI2Ni42NjY2NyUiIHN0b3AtY29sb3I9IiMxMGIwYmYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxODk5ZDEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -78,7 +81,7 @@ body {
   background-image: linear-gradient(to right, #3db65b, #10b8ac, #10b0bf, #1899d1);
 }
 
-/* line 10, ../scss/global.scss */
+/* line 9, ../scss/global.scss */
 .container {
   width: 100%;
   background: url('/../images/logo.png');
