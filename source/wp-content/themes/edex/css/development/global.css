@@ -84,5 +84,5 @@ body {
 /* line 9, ../scss/global.scss */
 .container {
   width: 100%;
-  background: url('/../images/logo.png');
+  background: url("../images/logo.png") no-repeat;
 }

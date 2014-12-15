@@ -8,5 +8,5 @@ body {
 }
 .container {
     width: 100%;
-    @include background(image-url("logo.png"));
+    background: url("../images/logo.png") no-repeat;
 }
