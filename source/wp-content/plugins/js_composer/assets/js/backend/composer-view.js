@@ -304,7 +304,7 @@
             var front = '';
             if (this.accessPolicy !== 'only') {
                 if(vc_frontend_enabled) front = '<span class="vc_spacer"></span><a class="wpb_switch-to-front-composer" href="' + $('#wpb-edit-inline').attr('href') +'">' + window.i18nLocale.main_button_title_frontend_editor + '</a>';
-                this.$buttonsContainer = $('<div class="composer-switch"><span class="logo-icon"></span><span class="vc_spacer"></span><a class="wpb_switch-to-composer" href="#">' + window.i18nLocale.main_button_title_backend_editor + '</a>' + front + '</div>').insertAfter('div#titlediv');
+                this.$buttonsContainer = $('<div class="composer-switch"><a class="wpb_switch-to-composer" href="#">' + window.i18nLocale.main_button_title_backend_editor + '</a>' + front + '</div>').insertAfter('div#titlediv');
                 // this.$switchButton = $('<a class="wpb_switch-to-composer button-primary" href="#">' + window.i18nLocale.main_button_title + '</a>').insertAfter('div#titlediv').wrap('<p class="composer-switch" />');
                 this.$switchButton = this.$buttonsContainer.find('.wpb_switch-to-composer');
                 this.$switchButton.click(this.switchComposer);

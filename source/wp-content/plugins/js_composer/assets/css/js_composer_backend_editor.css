@@ -2137,8 +2137,8 @@ option.wpb_video {
   display: block;
   margin: 0 auto;
   top: 20px;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 .vc_pull-right {
   float: right !important;
@@ -3326,13 +3326,21 @@ a.list-group-item.active > .vc_badge,
   padding: 4px 10px;
   background-color: #114C7F;
 }
+.composer-switch a.wpb_switch-to-composer,
+.composer-switch a:visited.wpb_switch-to-composer {
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
 .composer-switch a.wpb_switch-to-composer:hover,
 .composer-switch a:visited.wpb_switch-to-composer:hover {
   background-color: #0d3d63;
 }
 .composer-switch a.wpb_switch-to-front-composer,
 .composer-switch a:visited.wpb_switch-to-front-composer {
-  background-color: #114C7F;
   -webkit-border-top-right-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
   -moz-border-radius-topright: 4px;
@@ -3343,21 +3351,6 @@ a.list-group-item.active > .vc_badge,
 .composer-switch a.wpb_switch-to-front-composer:hover,
 .composer-switch a:visited.wpb_switch-to-front-composer:hover {
   background-color: #0d3d63;
-}
-.composer-switch .logo-icon {
-  -webkit-border-top-left-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  -moz-border-radius-topleft: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  background: #114c7f url(../vc/visual_composer.png) no-repeat center center;
-  width: 16px;
-  height: 28px;
-  padding: 0;
-  display: inline-block;
-  vertical-align: top;
-  padding: 4px 10px;
 }
 .composer-switch .vc_spacer {
   display: inline-block;
@@ -3778,7 +3771,6 @@ select.btn-danger {
 }
 .vc_css-editor .vc_layout-onion .vc_margin .vc_border .vc_padding .vc_content i {
   margin: 8px auto;
-  background: transparent url(../vc/logo_ce.png) center center no-repeat;
   display: block;
   width: 32px;
   height: 32px;

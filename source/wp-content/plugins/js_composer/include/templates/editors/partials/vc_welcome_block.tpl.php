@@ -1,5 +1,4 @@
 <div id="vc_no-content-helper" class="vc_welcome">
-	<span class="icon"></span>
 	<h5><?php _e('Welcome to Blank Page, You Have No Content Yet!', 'js_composer') ?></h5>
 
 	<h3><?php _e(' Add Some Content or Use Predefined Layouts...', 'js_composer') ?></h3>
