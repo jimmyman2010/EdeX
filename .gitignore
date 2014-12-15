@@ -58,3 +58,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+/.idea
+/source/wp-content/themes/edex/grunt/.sass-cache
+/source/wp-content/themes/edex/grunt/node_modules
