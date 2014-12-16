@@ -1,0 +1,269 @@
+/*
+	Theme Name: EdeX
+	Description: EdeX base on HTML5 Blank WordPress Theme
+	Version: 0.1.0
+	Author: Jimmy Man (@JimmyMan2010)
+	Author URI: http://emeien.com
+	Tags: HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+@font-face {
+  font-family: 'Orbitron-Regular';
+  src: url("fonts/orbitron-regular-webfont.eot");
+  src: url("fonts/orbitron-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/orbitron-regular-webfont.woff2") format("woff2"), url("fonts/orbitron-regular-webfont.woff") format("woff"), url("fonts/orbitron-regular-webfont.ttf") format("truetype"), url("fonts/orbitron-regular-webfont.svg#orbitronregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Opensans-Regular';
+  src: url("fonts/opensans-regular-webfont.eot");
+  src: url("fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/opensans-regular-webfont.woff2") format("woff2"), url("fonts/opensans-regular-webfont.woff") format("woff"), url("fonts/opensans-regular-webfont.ttf") format("truetype"), url("fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 1, ../sass/_main.scss */
+::selection {
+  background: #04A4CC;
+  color: #FFF;
+  text-shadow: none;
+}
+
+/* line 6, ../sass/_main.scss */
+::-webkit-selection {
+  background: #04A4CC;
+  color: #FFF;
+  text-shadow: none;
+}
+
+/* line 11, ../sass/_main.scss */
+::-moz-selection {
+  background: #04A4CC;
+  color: #FFF;
+  text-shadow: none;
+}
+
+/* clear */
+/* line 17, ../sass/_main.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 19, ../sass/_main.scss */
+.clearfix:before {
+  content: ' ';
+  display: table;
+}
+/* line 23, ../sass/_main.scss */
+.clearfix:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+/* line 29, ../sass/_main.scss */
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/* line 33, ../sass/_main.scss */
+a {
+  color: #444;
+  text-decoration: none;
+}
+/* line 36, ../sass/_main.scss */
+a:hover {
+  outline: 0;
+  color: #444;
+}
+/* line 40, ../sass/_main.scss */
+a:focus, a:active {
+  outline: 0;
+}
+
+/* line 44, ../sass/_main.scss */
+input:focus {
+  outline: 0;
+  border: 1px solid #04A4CC;
+}
+
+/* line 48, ../sass/_main.scss */
+body {
+  font: 16px 'Opensans-Regular', sans-serif;
+  color: #444;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNkYjY1YiIvPjxzdG9wIG9mZnNldD0iMzMuMzMzMzMlIiBzdG9wLWNvbG9yPSIjMTBiOGFjIi8+PHN0b3Agb2Zmc2V0PSI2Ni42NjY2NyUiIHN0b3AtY29sb3I9IiMxMGIwYmYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxODk5ZDEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3db65b), color-stop(33.33333%, #10b8ac), color-stop(66.66667%, #10b0bf), color-stop(100%, #1899d1));
+  background-image: -moz-linear-gradient(left, #3db65b, #10b8ac, #10b0bf, #1899d1);
+  background-image: -webkit-linear-gradient(left, #3db65b, #10b8ac, #10b0bf, #1899d1);
+  background-image: linear-gradient(to right, #3db65b, #10b8ac, #10b0bf, #1899d1);
+}
+
+/* line 1, ../sass/_wp_core.scss */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 4, ../sass/_wp_core.scss */
+.aligncenter, div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+/* line 8, ../sass/_wp_core.scss */
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+/* line 12, ../sass/_wp_core.scss */
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+/* line 17, ../sass/_wp_core.scss */
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+/* line 21, ../sass/_wp_core.scss */
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+/* line 24, ../sass/_wp_core.scss */
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+/* line 28, ../sass/_wp_core.scss */
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 34, ../sass/_wp_core.scss */
+.wp-caption {
+  background: #FFF;
+  border: 1px solid #F0F0F0;
+  max-width: 96%;
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+/* line 40, ../sass/_wp_core.scss */
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+/* line 43, ../sass/_wp_core.scss */
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+/* line 46, ../sass/_wp_core.scss */
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+/* line 49, ../sass/_wp_core.scss */
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+/* line 57, ../sass/_wp_core.scss */
+.wp-caption .wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* line 64, ../sass/_wp_core.scss */
+.gallery-caption {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* wrapper */
+/* line 2, ../sass/_structure.scss */
+.wrapper {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* header */
+/* logo */
+/* nav */
+/* sidebar */
+/* footer */
+@media print {
+  /* line 1, ../sass/_print.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 7, ../sass/_print.scss */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 10, ../sass/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 13, ../sass/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 16, ../sass/_print.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 19, ../sass/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 23, ../sass/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 26, ../sass/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 29, ../sass/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  /* line 35, ../sass/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 39, ../sass/_print.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
