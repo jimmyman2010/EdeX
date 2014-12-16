@@ -1,13 +1,94 @@
-/* wrapper */
-.wrapper {
-    max-width:1280px;
-    width:95%;
-    margin:0 auto;
-    position:relative;
-}
 /* header */
 .header {
+    .top-header {
+        text-align: center;
+        .logo{
+            display: inline-block;
+            margin: 58px 0 18px;
+            padding-top: 8px;
+        }
+        .top-nav{
+            position: absolute;
+            top:0; left:0;
+            width: 100%;
+            height: 58px;
+            padding: 7px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            .navbar-social{
+                float:right;
+                margin-right: 12px;
+                a {
+                    display: inline-block;
+                    width: 38px;
+                    height: 38px;
+                    line-height: 42px;
+                    @include border-radius(38px, 38px);
+                    background: #0a5660;
+                    color: white;
+                    text-align: center;
+                    font-size: 18px;
+                    padding: 0;
+                    margin: 3px 0 0 8px;
+                    &:hover {
+                        text-decoration: none;
+                        background: #02b6b7;
+                    }
+                }
+            }
+            .contact-us {
+                float: left;
+                margin-left:12px;
+                a {
+                    text-transform: uppercase;
+                    display: inline-block;
+                    color: white;
+                    height: 43px;
+                    line-height: 43px;
+                    border: 1px solid white;
+                    @include border-radius(10px, 10px);
+                    padding: 0 14px 0 50px;
+                    background: url(images/icons/icon-sprite.png) no-repeat -261px 8px #179391;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-header {
+        background: #191919;
+        color: white;
+        .navbar-toggle {
+            margin: 0;
+            padding: 14px;
+            span {
+                background-color: white;
+            }
+        }
+        .navbar-brand {
+            height: 45px;
+            line-height: 14px;
+            color: white;
+        }
+    }
 
+    .navigation{
+        .menu-item{
+            text-transform: uppercase;
+            font-size: 20px;
+            a{
+                color:white;
+                padding-top:0;
+                height: 43px;
+                line-height: 43px;
+                border:1px solid transparent;
+                @include border-radius(10px, 10px);
+                &:hover{
+                    background: none;
+                }
+            }
+        }
+    }
 }
 /* logo */
 .logo {

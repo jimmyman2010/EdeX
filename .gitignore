@@ -61,3 +61,5 @@ $RECYCLE.BIN/
 /.idea
 /source/wp-content/themes/edex/grunt/.sass-cache
 /source/wp-content/themes/edex/grunt/node_modules
+/.sass-cache
+/node_modules

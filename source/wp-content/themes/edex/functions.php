@@ -63,26 +63,15 @@ if (function_exists('add_theme_support'))
 \*------------------------------------*/
 
 // HTML5 Blank navigation
-function html5blank_nav()
+function edexNavigation()
 {
 	wp_nav_menu(
 	array(
+        'container'       => 'div',
+        'container_class' => 'navbar-collapse collapse',
+        'container_id'    => 'navbar',
 		'theme_location'  => 'header-menu',
-		'menu'            => '',
-		'container'       => 'div',
-		'container_class' => 'menu-{menu slug}-container',
-		'container_id'    => '',
-		'menu_class'      => 'menu',
-		'menu_id'         => '',
-		'echo'            => true,
-		'fallback_cb'     => 'wp_page_menu',
-		'before'          => '',
-		'after'           => '',
-		'link_before'     => '',
-		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
-		'depth'           => 0,
-		'walker'          => ''
+		'menu_class'      => 'nav navbar-nav navbar-right'
 		)
 	);
 }
@@ -123,17 +112,19 @@ function register_html5_menu()
     ));
 }
 
-// Remove the <div> surrounding the dynamic navigation to cleanup markup
-function my_wp_nav_menu_args($args = '')
-{
-    $args['container'] = false;
-    return $args;
-}
-
 // Remove Injected classes, ID's and Page ID's from Navigation <li> items
 function my_css_attributes_filter($var)
 {
-    return is_array($var) ? array() : '';
+    if (is_array($var)) {
+        $exclude = array('menu-item-type-post_type', 'menu-item-type-custom', 'menu-item-object-custom', 'menu-item-object-page');
+        foreach ($exclude as $cls) {
+            if (($key = array_search($cls, $var)) !== false) {
+                unset($var[$key]);
+            }
+        }
+        return $var;
+    }
+    return '';
 }
 
 // Remove invalid rel attribute values in the categorylist
@@ -358,10 +349,9 @@ add_filter('avatar_defaults', 'html5blankgravatar'); // Custom Gravatar in Setti
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
-add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
-// add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected classes (Commented out by default)
-// add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected ID (Commented out by default)
-// add_filter('page_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> Page ID's (Commented out by default)
+add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected classes (Commented out by default)
+add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected ID (Commented out by default)
+add_filter('page_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> Page ID's (Commented out by default)
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
