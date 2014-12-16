@@ -326,7 +326,8 @@ add_action('init', 'edexScripts'); // Add Custom Scripts to wp_head
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'edexStyles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'createPostTypePartner'); // Add our HTML5 Blank Custom Post Type
+add_action('init', 'createPostTypePartner'); // Add our Partner Type
+//add_action('init', 'createPostTypeWheel'); // Add our Partner Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -378,8 +379,6 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
 function createPostTypePartner()
 {
-    register_taxonomy_for_object_type('category', 'partner'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'partner');
     register_post_type('partner', // Register Custom Post Type
         array(
         'labels' => array(
@@ -401,18 +400,51 @@ function createPostTypePartner()
         'has_archive' => true,
         'supports' => array(
             'title',
-            'editor',
             'excerpt',
             'thumbnail'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
+        'can_export' => true // Allows export in Tools > Export
     ));
 }
-
+/*
+// Create 1 Custom Post type for a Demo, called HTML5-Blank
+function createPostTypeWheel()
+{
+    register_taxonomy_for_object_type('category', 'wheel'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'wheel');
+    register_post_type('wheel', // Register Custom Post Type
+        array(
+            'labels' => array(
+                'name' => __('Wheel Item', 'html5blank'), // Rename these to suit
+                'singular_name' => __('Wheel Item', 'html5blank'),
+                'add_new' => __('Add New', 'html5blank'),
+                'add_new_item' => __('Add New Wheel Item', 'html5blank'),
+                'edit' => __('Edit', 'html5blank'),
+                'edit_item' => __('Edit Wheel Item', 'html5blank'),
+                'new_item' => __('New Wheel Item', 'html5blank'),
+                'view' => __('View Wheel Item', 'html5blank'),
+                'view_item' => __('View Wheel Item', 'html5blank'),
+                'search_items' => __('Search Wheel Item', 'html5blank'),
+                'not_found' => __('No Wheel Item found', 'html5blank'),
+                'not_found_in_trash' => __('No Wheel Item found in Trash', 'html5blank')
+            ),
+            'public' => true,
+            'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                //'excerpt',
+                'thumbnail'
+            ), // Go to Dashboard Custom HTML5 Blank post for supports
+            'can_export' => true, // Allows export in Tools > Export
+            'taxonomies' => array(
+                'post_tag',
+                'category'
+            ) // Add Category and Post Tags support
+        ));
+}
+*/
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/

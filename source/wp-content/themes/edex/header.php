@@ -23,7 +23,7 @@
 			<!-- header -->
 			<header class="header clearfix" role="banner">
 				<div class="container">
-					<div class="top-header">
+					<div class="top-header clearfix">
 						<!-- logo -->
 						<a class="logo" href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->

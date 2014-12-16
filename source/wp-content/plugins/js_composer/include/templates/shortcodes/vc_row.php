@@ -21,7 +21,9 @@ $css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'vc_row wpb_row 
 
 $style = $this->buildStyle($bg_image, $bg_color, $bg_image_repeat, $font_color, $padding, $margin_bottom);
 $output .= '<div class="'.$css_class.'"'.$style.'>';
+$output .= '<div class="container">';
 $output .= wpb_js_remove_wpautop($content);
+$output .= '</div>';
 $output .= '</div>'.$this->endBlockComment('row');
 
 echo $output;

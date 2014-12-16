@@ -213,7 +213,7 @@ a img.aligncenter {
 /* line 17, ../sass/_structure.scss */
 .header .top-header .top-nav .navbar-social {
   float: right;
-  margin-right: 12px;
+  margin: 3px 12px 0 0;
 }
 /* line 20, ../sass/_structure.scss */
 .header .top-header .top-nav .navbar-social a {
@@ -229,7 +229,7 @@ a img.aligncenter {
   text-align: center;
   font-size: 18px;
   padding: 0;
-  margin: 3px 0 0 8px;
+  margin-left: 8px;
 }
 /* line 32, ../sass/_structure.scss */
 .header .top-header .top-nav .navbar-social a:hover {
@@ -253,7 +253,7 @@ a img.aligncenter {
   -webkit-border-radius: 10px 10px;
   border-radius: 10px / 10px;
   padding: 0 14px 0 50px;
-  background: url(images/icons/icon-sprite.png) no-repeat -261px 8px #179391;
+  background: url(images/icons/icon-sprite.png) no-repeat -560px 8px rgba(0, 0, 0, 0.2);
 }
 /* line 51, ../sass/_structure.scss */
 .header .top-header .top-nav .contact-us a:hover {
@@ -300,10 +300,60 @@ a img.aligncenter {
   background: none;
 }
 
-/* logo */
-/* nav */
-/* sidebar */
+/* line 94, ../sass/_structure.scss */
+article .vc_row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* footer */
+@media only screen and (min-width: 768px) {
+  /* line 2, ../sass/_tablet.scss */
+  .header .top-header {
+    text-align: left;
+    padding: 0 15px;
+  }
+  /* line 5, ../sass/_tablet.scss */
+  .header .top-header .top-nav {
+    position: relative;
+    height: auto;
+    width: auto;
+    border-bottom: none;
+    padding: 0;
+    float: right;
+  }
+  /* line 12, ../sass/_tablet.scss */
+  .header .top-header .top-nav .navbar-social {
+    float: none;
+    margin: 22px 0 18px;
+  }
+  /* line 16, ../sass/_tablet.scss */
+  .header .top-header .top-nav .contact-us {
+    float: none;
+    position: absolute;
+    right: 0;
+    bottom: -42px;
+  }
+  /* line 21, ../sass/_tablet.scss */
+  .header .top-header .top-nav .contact-us a {
+    background-color: transparent;
+  }
+  /* line 26, ../sass/_tablet.scss */
+  .header .top-header .logo {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 52px;
+  }
+  /* line 34, ../sass/_tablet.scss */
+  .header .navbar-header .navbar-brand {
+    display: none;
+  }
+  /* line 40, ../sass/_tablet.scss */
+  .header .navigation .menu-item:last-child {
+    margin-right: 175px;
+  }
+}
 @media print {
   /* line 1, ../sass/_print.scss */
   * {

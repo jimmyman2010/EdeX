@@ -1,0 +1,45 @@
+.header {
+    .top-header{
+        text-align: left;
+        padding: 0 15px;
+        .top-nav{
+            position: relative;
+            height:auto;
+            width:auto;
+            border-bottom:none;
+            padding: 0;
+            float:right;
+            .navbar-social{
+                float:none;
+                margin: 22px 0 18px;
+            }
+            .contact-us{
+                float:none;
+                position: absolute;
+                right: 0;
+                bottom: -42px;
+                a{
+                    background-color: transparent;
+                }
+            }
+        }
+        .logo{
+            margin:0;
+            padding: 0;
+            position: absolute;
+            top:52px;
+        }
+    }
+    .navbar-header{
+        .navbar-brand{
+            display: none;
+        }
+    }
+    .navigation {
+        .menu-item {
+            &:last-child{
+                margin-right: 175px;
+            }
+        }
+    }
+}
