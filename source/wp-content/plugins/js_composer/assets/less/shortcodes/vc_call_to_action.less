@@ -1,30 +1,38 @@
 /* Call to action
 ---------------------------------------------------------- */
 .vc_call_to_action {
-    background-color: @vc_call_to_action_2_bg;
-    border: 2px solid @vc_call_to_action_2_bg;
-    padding: 2em;
-    border-radius: 5px;
     *:last-child {
         margin-bottom: 0;
     }
     &.vc_cta_ {
         &rounded {
-        //default style
+            background-color: @vc_call_to_action_2_bg;
+            border: 2px solid @vc_call_to_action_2_bg;
+            padding: 2em;
+            border-radius: 5px;
         }
         &square {
-            border-radius: 0;
+            background-color: @vc_call_to_action_2_bg;
+            border: 2px solid @vc_call_to_action_2_bg;
+            padding: 2em;
         }
         &square_outlined {
-            border-radius: 0;
-            background: none !important;
+            border: 2px solid @vc_call_to_action_2_bg;
+            padding: 2em;
+            background: none;
         //border-width: 2px;
         }
         &round {
+            background-color: @vc_call_to_action_2_bg;
+            border: 2px solid @vc_call_to_action_2_bg;
+            padding: 2em;
             border-radius: 50px;
         }
         &outlined {
-            background: none !important;
+            border: 2px solid @vc_call_to_action_2_bg;
+            padding: 2em;
+            border-radius: 5px;
+            background: none;
         }
     }
     hgroup {

@@ -1745,38 +1745,8 @@ vc_map( array(
 ---------------------------------------------------------- */
 $icons_arr = array(
 	__( 'None', 'js_composer' ) => 'none',
-	__( 'Address book icon', 'js_composer' ) => 'wpb_address_book',
-	__( 'Alarm clock icon', 'js_composer' ) => 'wpb_alarm_clock',
-	__( 'Anchor icon', 'js_composer' ) => 'wpb_anchor',
-	__( 'Application Image icon', 'js_composer' ) => 'wpb_application_image',
-	__( 'Arrow icon', 'js_composer' ) => 'wpb_arrow',
-	__( 'Asterisk icon', 'js_composer' ) => 'wpb_asterisk',
-	__( 'Hammer icon', 'js_composer' ) => 'wpb_hammer',
-	__( 'Balloon icon', 'js_composer' ) => 'wpb_balloon',
-	__( 'Balloon Buzz icon', 'js_composer' ) => 'wpb_balloon_buzz',
-	__( 'Balloon Facebook icon', 'js_composer' ) => 'wpb_balloon_facebook',
-	__( 'Balloon Twitter icon', 'js_composer' ) => 'wpb_balloon_twitter',
-	__( 'Battery icon', 'js_composer' ) => 'wpb_battery',
-	__( 'Binocular icon', 'js_composer' ) => 'wpb_binocular',
-	__( 'Document Excel icon', 'js_composer' ) => 'wpb_document_excel',
-	__( 'Document Image icon', 'js_composer' ) => 'wpb_document_image',
-	__( 'Document Music icon', 'js_composer' ) => 'wpb_document_music',
-	__( 'Document Office icon', 'js_composer' ) => 'wpb_document_office',
-	__( 'Document PDF icon', 'js_composer' ) => 'wpb_document_pdf',
-	__( 'Document Powerpoint icon', 'js_composer' ) => 'wpb_document_powerpoint',
-	__( 'Document Word icon', 'js_composer' ) => 'wpb_document_word',
-	__( 'Bookmark icon', 'js_composer' ) => 'wpb_bookmark',
-	__( 'Camcorder icon', 'js_composer' ) => 'wpb_camcorder',
-	__( 'Camera icon', 'js_composer' ) => 'wpb_camera',
-	__( 'Chart icon', 'js_composer' ) => 'wpb_chart',
-	__( 'Chart pie icon', 'js_composer' ) => 'wpb_chart_pie',
-	__( 'Clock icon', 'js_composer' ) => 'wpb_clock',
-	__( 'Fire icon', 'js_composer' ) => 'wpb_fire',
-	__( 'Heart icon', 'js_composer' ) => 'wpb_heart',
-	__( 'Mail icon', 'js_composer' ) => 'wpb_mail',
-	__( 'Play icon', 'js_composer' ) => 'wpb_play',
-	__( 'Shield icon', 'js_composer' ) => 'wpb_shield',
-	__( 'Video icon', 'js_composer' ) => "wpb_video"
+	__( 'Contact person', 'js_composer' ) => 'contact-person',
+	__( 'Arrow with circle', 'js_composer' ) => 'arrow-with-circle'
 );
 
 vc_map( array(
@@ -1822,13 +1792,6 @@ vc_map( array(
 			'param_name' => 'icon',
 			'value' => $icons_arr,
 			'description' => __( 'Button icon.', 'js_composer' )
-		),
-		array(
-			'type' => 'dropdown',
-			'heading' => __( 'Size', 'js_composer' ),
-			'param_name' => 'size',
-			'value' => $size_arr,
-			'description' => __( 'Button size.', 'js_composer' )
 		),
 		array(
 			'type' => 'textfield',
@@ -1879,20 +1842,12 @@ vc_map( array(
 			'param_holder_class' => 'vc_colored-dropdown'
 		),
 		/*array(
-        'type' => 'dropdown',
-        'heading' => __( 'Icon', 'js_composer' ),
-        'param_name' => 'icon',
-        'value' => getVcShared( 'icons' ),
-        'description' => __( 'Button icon.', 'js_composer' )
-  ),*/
-		array(
 			'type' => 'dropdown',
-			'heading' => __( 'Size', 'js_composer' ),
-			'param_name' => 'size',
-			'value' => getVcShared( 'sizes' ),
-			'std' => 'md',
-			'description' => __( 'Button size.', 'js_composer' )
-		),
+			'heading' => __( 'Icon', 'js_composer' ),
+			'param_name' => 'icon',
+			'value' => getVcShared( 'icons' ),
+			'description' => __( 'Button icon.', 'js_composer' )
+  		),*/
 		array(
 			'type' => 'textfield',
 			'heading' => __( 'Extra class name', 'js_composer' ),
@@ -1954,13 +1909,6 @@ vc_map( array(
 			'param_name' => 'icon',
 			'value' => $icons_arr,
 			'description' => __( 'Button icon.', 'js_composer' )
-		),
-		array(
-			'type' => 'dropdown',
-			'heading' => __( 'Size', 'js_composer' ),
-			'param_name' => 'size',
-			'value' => $size_arr,
-			'description' => __( 'Button size.', 'js_composer' )
 		),
 		array(
 			'type' => 'dropdown',
@@ -2081,14 +2029,6 @@ vc_map( array(
         'value' => getVcShared( 'icons' ),
         'description' => __( 'Button icon.', 'js_composer' )
   ),*/
-		array(
-			'type' => 'dropdown',
-			'heading' => __( 'Size', 'js_composer' ),
-			'param_name' => 'size',
-			'value' => getVcShared( 'sizes' ),
-			'std' => 'md',
-			'description' => __( 'Button size.', 'js_composer' )
-		),
 		array(
 			'type' => 'dropdown',
 			'heading' => __( 'Button position', 'js_composer' ),
@@ -3174,6 +3114,7 @@ class VcSharedLibrary {
 	);
 
 	public static $cta_styles = array(
+		'None' => 'none',
 		'Rounded' => 'rounded',
 		'Square' => 'square',
 		'Round' => 'round',

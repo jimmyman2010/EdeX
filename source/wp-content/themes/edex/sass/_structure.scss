@@ -52,22 +52,32 @@
             height: 45px;
             line-height: 14px;
             color: white;
+            font-size: 16px;
         }
     }
 
     .navigation{
-        .menu-item{
-            text-transform: uppercase;
-            font-size: 20px;
-            a{
-                color:white;
-                padding-top:0;
-                height: 43px;
-                line-height: 43px;
-                border:1px solid transparent;
-                @include border-radius(10px, 10px);
-                &:hover{
-                    background: none;
+        .navbar-collapse{
+            position: absolute;
+            width: 100%;
+            margin-left: -15px;
+            margin-right: -15px;
+            background-color: white;
+            z-index:100;
+            ul{
+                margin:0 15px;
+            }
+            li{
+                margin: 4px 0;
+                border-top: 1px solid #b3b3b3;
+                &:first-child{
+                    border-top:none;
+                }
+                a{
+                    padding:15px 15px 15px 0;
+                    &:hover{
+                        background: none;
+                    }
                 }
             }
         }
@@ -86,7 +96,7 @@ article .vc_row{
         height: 38px;
         line-height: 42px;
         @include border-radius(38px, 38px);
-        background: #0a5660;
+        background-color: #0a5660;
         color: white;
         text-align: center;
         font-size: 18px;
@@ -94,23 +104,71 @@ article .vc_row{
         margin-left: 8px;
         &:hover {
             text-decoration: none;
-            background: #02b6b7;
+            background-color: #02b6b7;
         }
     }
 }
 
+main{
+    margin: 45px 0 0;
+}
+
 /* footer */
 .footer {
+    .logo-bottom{
+        background-color: white;
+        text-align: center;
+        padding: 26px 0 24px;
+        img{
+            height: 70px;
+        }
+    }
+    .rabel-bottom{
+        background-color: black;
+        position: relative;
+        .navigation{
+            .navbar-collapse{
+                background-color: white;
+                position: absolute;
+                bottom: 56px;
+                width: 100%;
+                margin-left: -15px;
+                margin-right: -15px;
+                z-index: 90;
+                ul{
+                    margin-right: 15px;
+                    margin-left: 15px;
+                }
+                li{
+                    width: 50%;
+                    float: left;
+                    padding: 3px 0;
+                    border-top:1px solid #b3b3b3;
+                    &:nth-child(1), &:nth-child(2) {
+                        border-top: none;
+                    }
+                    a{
+                        padding: 15px 15px 15px 0;
+                        &:hover{
+                            background-color: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .navbar-footer{
         margin-right:-15px;
         margin-left:-15px;
-        background-color: black;
         padding: 3px 0;
         .navbar-brand{
             height: auto;
-            padding: 5px 0px 0px 4px;
+            padding: 5px 0 0 4px;
             a{
                 background-color: #2f2f2f;
+                &:hover{
+                    background-color: #0fabaa;
+                }
             }
         }
         .navbar-toggle{
