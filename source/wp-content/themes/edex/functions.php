@@ -66,14 +66,28 @@ if (function_exists('add_theme_support'))
 function edexNavigation()
 {
 	wp_nav_menu(
-	array(
-        'container'       => 'div',
-        'container_class' => 'navbar-collapse collapse',
-        'container_id'    => 'navbar',
-		'theme_location'  => 'header-menu',
-		'menu_class'      => 'nav navbar-nav navbar-right'
-		)
+        array(
+            'container'       => 'div',
+            'container_class' => 'navbar-collapse collapse',
+            'container_id'    => 'navbar-header',
+            'theme_location'  => 'header-menu',
+            'menu_class'      => 'nav navbar-nav navbar-right'
+        )
 	);
+}
+
+// HTML5 Blank navigation
+function edexNavigationAtFooter()
+{
+    wp_nav_menu(
+        array(
+            'container'       => 'div',
+            'container_class' => 'navbar-collapse collapse',
+            'container_id'    => 'navbar-footer',
+            'theme_location'  => 'footer-menu',
+            'menu_class'      => 'nav navbar-nav navbar-right'
+        )
+    );
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -103,12 +117,11 @@ function edexStyles()
 }
 
 // Register HTML5 Blank Navigation
-function register_html5_menu()
+function registerEdexMenu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+        'footer-menu' => __('Footer Menu', 'html5blank'), // Sidebar Navigation
     ));
 }
 
@@ -325,7 +338,7 @@ function html5blankcomments($comment, $args, $depth)
 add_action('init', 'edexScripts'); // Add Custom Scripts to wp_head
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'edexStyles'); // Add Theme Stylesheet
-add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
+add_action('init', 'registerEdexMenu'); // Add HTML5 Blank Menu
 add_action('init', 'createPostTypePartner'); // Add our Partner Type
 //add_action('init', 'createPostTypeWheel'); // Add our Partner Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()

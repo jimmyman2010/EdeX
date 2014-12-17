@@ -1,13 +1,28 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
-
+				<div class="container">
+					<!-- nav -->
+					<nav class="navigation" role="navigation">
+						<?php edexNavigationAtFooter(); ?>
+					</nav>
+					<!-- /nav -->
+					<div class="navbar-footer clearfix">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-footer" aria-expanded="false" aria-controls="navbar-footer">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand">
+							<div class="navbar-social">
+								<a class="fa fa-facebook" href="#"></a>
+								<a class="fa fa-twitter" href="#"></a>
+								<a class="fa fa-rss" href="#"></a>
+								<a class="fa fa-google-plus" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</footer>
 			<!-- /footer -->
 

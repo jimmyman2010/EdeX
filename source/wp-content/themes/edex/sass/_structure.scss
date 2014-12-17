@@ -17,23 +17,6 @@
             .navbar-social{
                 float:right;
                 margin: 3px 12px 0 0;
-                a {
-                    display: inline-block;
-                    width: 38px;
-                    height: 38px;
-                    line-height: 42px;
-                    @include border-radius(38px, 38px);
-                    background: #0a5660;
-                    color: white;
-                    text-align: center;
-                    font-size: 18px;
-                    padding: 0;
-                    margin-left: 8px;
-                    &:hover {
-                        text-decoration: none;
-                        background: #02b6b7;
-                    }
-                }
             }
             .contact-us {
                 float: left;
@@ -96,7 +79,45 @@ article .vc_row{
     margin-right: 0;
 }
 
+.navbar-social{
+    a {
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        line-height: 42px;
+        @include border-radius(38px, 38px);
+        background: #0a5660;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        padding: 0;
+        margin-left: 8px;
+        &:hover {
+            text-decoration: none;
+            background: #02b6b7;
+        }
+    }
+}
+
 /* footer */
 .footer {
-
+    .navbar-footer{
+        margin-right:-15px;
+        margin-left:-15px;
+        background-color: black;
+        padding: 3px 0;
+        .navbar-brand{
+            height: auto;
+            padding: 5px 0px 0px 4px;
+            a{
+                background-color: #2f2f2f;
+            }
+        }
+        .navbar-toggle{
+            background-color: #191919;
+            span {
+                background-color: white;
+            }
+        }
+    }
 }

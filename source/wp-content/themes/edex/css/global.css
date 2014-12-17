@@ -215,8 +215,78 @@ a img.aligncenter {
   float: right;
   margin: 3px 12px 0 0;
 }
-/* line 20, ../sass/_structure.scss */
-.header .top-header .top-nav .navbar-social a {
+/* line 21, ../sass/_structure.scss */
+.header .top-header .top-nav .contact-us {
+  float: left;
+  margin-left: 12px;
+}
+/* line 24, ../sass/_structure.scss */
+.header .top-header .top-nav .contact-us a {
+  text-transform: uppercase;
+  display: inline-block;
+  color: white;
+  height: 43px;
+  line-height: 43px;
+  border: 1px solid white;
+  -moz-border-radius: 10px / 10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px / 10px;
+  padding: 0 14px 0 50px;
+  background: url(images/icons/icon-sprite.png) no-repeat -560px 8px rgba(0, 0, 0, 0.2);
+}
+/* line 34, ../sass/_structure.scss */
+.header .top-header .top-nav .contact-us a:hover {
+  text-decoration: none;
+}
+/* line 41, ../sass/_structure.scss */
+.header .navbar-header {
+  background: #191919;
+  color: white;
+}
+/* line 44, ../sass/_structure.scss */
+.header .navbar-header .navbar-toggle {
+  margin: 0;
+  padding: 14px;
+}
+/* line 47, ../sass/_structure.scss */
+.header .navbar-header .navbar-toggle span {
+  background-color: white;
+}
+/* line 51, ../sass/_structure.scss */
+.header .navbar-header .navbar-brand {
+  height: 45px;
+  line-height: 14px;
+  color: white;
+}
+/* line 59, ../sass/_structure.scss */
+.header .navigation .menu-item {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+/* line 62, ../sass/_structure.scss */
+.header .navigation .menu-item a {
+  color: white;
+  padding-top: 0;
+  height: 43px;
+  line-height: 43px;
+  border: 1px solid transparent;
+  -moz-border-radius: 10px / 10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px / 10px;
+}
+/* line 69, ../sass/_structure.scss */
+.header .navigation .menu-item a:hover {
+  background: none;
+}
+
+/* line 77, ../sass/_structure.scss */
+article .vc_row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 83, ../sass/_structure.scss */
+.navbar-social a {
   display: inline-block;
   width: 38px;
   height: 38px;
@@ -231,82 +301,38 @@ a img.aligncenter {
   padding: 0;
   margin-left: 8px;
 }
-/* line 32, ../sass/_structure.scss */
-.header .top-header .top-nav .navbar-social a:hover {
+/* line 95, ../sass/_structure.scss */
+.navbar-social a:hover {
   text-decoration: none;
   background: #02b6b7;
 }
-/* line 38, ../sass/_structure.scss */
-.header .top-header .top-nav .contact-us {
-  float: left;
-  margin-left: 12px;
-}
-/* line 41, ../sass/_structure.scss */
-.header .top-header .top-nav .contact-us a {
-  text-transform: uppercase;
-  display: inline-block;
-  color: white;
-  height: 43px;
-  line-height: 43px;
-  border: 1px solid white;
-  -moz-border-radius: 10px / 10px;
-  -webkit-border-radius: 10px 10px;
-  border-radius: 10px / 10px;
-  padding: 0 14px 0 50px;
-  background: url(images/icons/icon-sprite.png) no-repeat -560px 8px rgba(0, 0, 0, 0.2);
-}
-/* line 51, ../sass/_structure.scss */
-.header .top-header .top-nav .contact-us a:hover {
-  text-decoration: none;
-}
-/* line 58, ../sass/_structure.scss */
-.header .navbar-header {
-  background: #191919;
-  color: white;
-}
-/* line 61, ../sass/_structure.scss */
-.header .navbar-header .navbar-toggle {
-  margin: 0;
-  padding: 14px;
-}
-/* line 64, ../sass/_structure.scss */
-.header .navbar-header .navbar-toggle span {
-  background-color: white;
-}
-/* line 68, ../sass/_structure.scss */
-.header .navbar-header .navbar-brand {
-  height: 45px;
-  line-height: 14px;
-  color: white;
-}
-/* line 76, ../sass/_structure.scss */
-.header .navigation .menu-item {
-  text-transform: uppercase;
-  font-size: 20px;
-}
-/* line 79, ../sass/_structure.scss */
-.header .navigation .menu-item a {
-  color: white;
-  padding-top: 0;
-  height: 43px;
-  line-height: 43px;
-  border: 1px solid transparent;
-  -moz-border-radius: 10px / 10px;
-  -webkit-border-radius: 10px 10px;
-  border-radius: 10px / 10px;
-}
-/* line 86, ../sass/_structure.scss */
-.header .navigation .menu-item a:hover {
-  background: none;
-}
-
-/* line 94, ../sass/_structure.scss */
-article .vc_row {
-  margin-left: 0;
-  margin-right: 0;
-}
 
 /* footer */
+/* line 104, ../sass/_structure.scss */
+.footer .navbar-footer {
+  margin-right: -15px;
+  margin-left: -15px;
+  background-color: black;
+  padding: 3px 0;
+}
+/* line 109, ../sass/_structure.scss */
+.footer .navbar-footer .navbar-brand {
+  height: auto;
+  padding: 5px 0px 0px 4px;
+}
+/* line 112, ../sass/_structure.scss */
+.footer .navbar-footer .navbar-brand a {
+  background-color: #2f2f2f;
+}
+/* line 116, ../sass/_structure.scss */
+.footer .navbar-footer .navbar-toggle {
+  background-color: #191919;
+}
+/* line 118, ../sass/_structure.scss */
+.footer .navbar-footer .navbar-toggle span {
+  background-color: white;
+}
+
 @media only screen and (min-width: 768px) {
   /* line 2, ../sass/_tablet.scss */
   .header .top-header {
