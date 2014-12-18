@@ -19,14 +19,6 @@ $colors_arr = array(
 	__( 'Black', 'js_composer' ) => "btn-inverse"
 );
 
-// Used in "Button" and "Call to Action" blocks
-$size_arr = array(
-	__( 'Regular size', 'js_composer' ) => 'wpb_regularsize',
-	__( 'Large', 'js_composer' ) => 'btn-large',
-	__( 'Small', 'js_composer' ) => 'btn-small',
-	__( 'Mini', 'js_composer' ) => "btn-mini"
-);
-
 $target_arr = array(
 	__( 'Same window', 'js_composer' ) => '_self',
 	__( 'New window', 'js_composer' ) => "_blank"
@@ -506,7 +498,7 @@ vc_map( array(
 
 /* Facebook like button
 ---------------------------------------------------------- */
-vc_map( array(
+/*vc_map( array(
 	'name' => __( 'Facebook Like', 'js_composer' ),
 	'base' => 'vc_facebook',
 	'icon' => 'icon-wpb-balloon-facebook-left',
@@ -527,10 +519,10 @@ vc_map( array(
 		)
 	)
 ) );
-
+*/
 /* Tweetmeme button
 ---------------------------------------------------------- */
-vc_map( array(
+/*vc_map( array(
 	'name' => __( 'Tweetmeme Button', 'js_composer' ),
 	'base' => 'vc_tweetmeme',
 	'icon' => 'icon-wpb-tweetme',
@@ -551,10 +543,10 @@ vc_map( array(
 		)
 	)
 ) );
-
+*/
 /* Google+ button
 ---------------------------------------------------------- */
-vc_map( array(
+/*vc_map( array(
 	'name' => __( 'Google+ Button', 'js_composer' ),
 	'base' => 'vc_googleplus',
 	'icon' => 'icon-wpb-application-plus',
@@ -588,10 +580,10 @@ vc_map( array(
 		)
 	)
 ) );
-
+*/
 /* Pinterest button
 ---------------------------------------------------------- */
-vc_map( array(
+/*vc_map( array(
 	'name' => __( 'Pinterest', 'js_composer' ),
 	'base' => 'vc_pinterest',
 	'icon' => 'icon-wpb-pinterest',
@@ -611,10 +603,10 @@ vc_map( array(
 		)
 	)
 ) );
-
+*/
 /* Toggle (FAQ)
 ---------------------------------------------------------- */
-vc_map( array(
+/*vc_map( array(
 	'name' => __( 'FAQ', 'js_composer' ),
 	'base' => 'vc_toggle',
 	'icon' => 'icon-wpb-toggle-small-expand',
@@ -659,7 +651,7 @@ vc_map( array(
 	),
 	'js_view' => 'VcToggleView'
 ) );
-
+*/
 /* Single image */
 vc_map( array(
 	'name' => __( 'Single Image', 'js_composer' ),
@@ -1032,7 +1024,7 @@ vc_map( array(
 
 /* Tour section
 ---------------------------------------------------------- */
-$tab_id_1 = time() . '-1-' . rand( 0, 100 );
+/*$tab_id_1 = time() . '-1-' . rand( 0, 100 );
 $tab_id_2 = time() . '-2-' . rand( 0, 100 );
 WPBMap::map( 'vc_tour', array(
 	'name' => __( 'Tour', 'js_composer' ),
@@ -1079,7 +1071,9 @@ WPBMap::map( 'vc_tour', array(
 ',
 	'js_view' => $vc_is_wp_version_3_6_more ? 'VcTabsView' : 'VcTabsView35'
 ) );
-
+*/
+/* Tab item
+---------------------------------------------------------- */
 vc_map( array(
 	'name' => __( 'Tab', 'js_composer' ),
 	'base' => 'vc_tab',
@@ -1168,6 +1162,61 @@ vc_map( array(
 		),
 	),
 	'js_view' => 'VcAccordionTabView'
+) );
+
+/* Wheel block
+---------------------------------------------------------- */
+vc_map( array(
+	'name' => __( 'Wheel', 'js_composer' ),
+	'base' => 'vc_wheel',
+	'show_settings_on_create' => false,
+	'is_container' => true,
+	'icon' => 'icon-wpb-ui-accordion',
+	'category' => __( 'Content', 'js_composer' ),
+	'description' => __( 'Wheel content panels', 'js_composer' ),
+	'params' => array(
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Widget title', 'js_composer' ),
+			'param_name' => 'title',
+			'description' => __( 'Enter text which will be used as widget title. Leave blank if no title is needed.', 'js_composer' )
+		),
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Extra class name', 'js_composer' ),
+			'param_name' => 'el_class',
+			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' )
+		)
+	),
+	'custom_markup' => '
+<div class="wpb_accordion_holder wpb_holder clearfix vc_container_for_children">
+%content%
+</div>
+<div class="tab_controls">
+    <a class="add_tab" title="' . __( 'Add piece', 'js_composer' ) . '"><span class="vc_icon"></span> <span class="tab-label">' . __( 'Add piece', 'js_composer' ) . '</span></a>
+</div>
+',
+	'default_content' => '
+    [vc_wheel_piece title="' . __( 'Piece 1', 'js_composer' ) . '"][/vc_wheel_piece]
+    [vc_wheel_piece title="' . __( 'Piece 2', 'js_composer' ) . '"][/vc_wheel_piece]
+',
+	'js_view' => 'VcWheelView'
+) );
+vc_map( array(
+	'name' => __( 'Piece', 'js_composer' ),
+	'base' => 'vc_wheel_piece',
+	'allowed_container_element' => 'vc_row',
+	'is_container' => true,
+	'content_element' => false,
+	'params' => array(
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Title', 'js_composer' ),
+			'param_name' => 'title',
+			'description' => __( 'Wheel piece title.', 'js_composer' )
+		),
+	),
+	'js_view' => 'VcWheelPieceView'
 ) );
 
 /* Teaser grid
@@ -2052,7 +2101,7 @@ vc_map( array(
 
 /* Video element
 ---------------------------------------------------------- */
-vc_map( array(
+/*vc_map( array(
 	'name' => __( 'Video Player', 'js_composer' ),
 	'base' => 'vc_video',
 	'icon' => 'icon-wpb-film-youtube',
@@ -2087,10 +2136,10 @@ vc_map( array(
 		)
 	)
 ) );
-
+*/
 /* Google maps element
 ---------------------------------------------------------- */
-vc_map( array(
+/*vc_map( array(
 	'name' => __( 'Google Maps', 'js_composer' ),
 	'base' => 'vc_gmaps',
 	'icon' => 'icon-wpb-map-pin',
@@ -2116,26 +2165,6 @@ vc_map( array(
 			'admin_label' => true,
 			'description' => __( 'Enter map height in pixels. Example: 200 or leave it empty to make map responsive.', 'js_composer' )
 		),
-		/*array(
-        'type' => 'dropdown',
-        'heading' => __( 'Map type', 'js_composer' ),
-        'param_name' => 'type',
-        'value' => array( __( 'Map', 'js_composer' ) => 'm', __( 'Satellite', 'js_composer' ) => 'k', __( 'Map + Terrain', 'js_composer' ) => "p" ),
-        'description' => __( 'Select map type.', 'js_composer' )
-  ),
-  array(
-        'type' => 'dropdown',
-        'heading' => __( 'Map Zoom', 'js_composer' ),
-        'param_name' => 'zoom',
-        'value' => array( __( '14 - Default', 'js_composer' ) => 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20)
-  ),
-  array(
-        'type' => 'checkbox',
-        'heading' => __( 'Remove info bubble', 'js_composer' ),
-        'param_name' => 'bubble',
-        'description' => __( 'If selected, information bubble will be hidden.', 'js_composer' ),
-        'value' => array( __( 'Yes, please', 'js_composer' ) => true),
-  ),*/
 		array(
 			'type' => 'textfield',
 			'heading' => __( 'Extra class name', 'js_composer' ),
@@ -2144,7 +2173,7 @@ vc_map( array(
 		)
 	)
 ) );
-
+*/
 /* Raw HTML
 ---------------------------------------------------------- */
 vc_map( array(
@@ -2189,7 +2218,7 @@ vc_map( array(
 
 /* Flickr
 ---------------------------------------------------------- */
-vc_map( array(
+/*vc_map( array(
 	'base' => 'vc_flickr',
 	'name' => __( 'Flickr Widget', 'js_composer' ),
 	'icon' => 'icon-wpb-flickr',
@@ -2244,11 +2273,11 @@ vc_map( array(
 		)
 	)
 ) );
-
+*/
 
 /* Graph
 ---------------------------------------------------------- */
-vc_map( array(
+/*vc_map( array(
 	'name' => __( 'Progress Bar', 'js_composer' ),
 	'base' => 'vc_progress_bar',
 	'icon' => 'icon-wpb-graph',
@@ -2315,11 +2344,11 @@ vc_map( array(
 		)
 	)
 ) );
-
+*/
 /**
  * Pie chart
  */
-vc_map( array(
+/*vc_map( array(
 	'name' => __( 'Pie chart', 'vc_extend' ),
 	'base' => 'vc_pie',
 	'class' => '',
@@ -2373,7 +2402,7 @@ vc_map( array(
 
 	)
 ) );
-
+*/
 
 /* Support for 3rd Party plugins
 ---------------------------------------------------------- */
