@@ -1,4 +1,16 @@
+# Use gruntjs
+npm install
 
+# to generate css in js_composer
+grunt less
+
+# run default
+grunt
+
+# looking for files changed
+grunt watch
+
+# config the localhost
 <VirtualHost *:80>
     DocumentRoot "E:/edex/source"
     ServerName edex.dev

@@ -680,7 +680,7 @@
                 this.$el.find('.wpb_element_wrapper').removeClass(el_class);
                 this.$el.find('button.title').attr({ "class":"title textfield wpb_button " + el_class });
                 if (params.icon !== 'none' && this.$el.find('button i.icon').length === 0) {
-                    this.$el.find('button.title').append('<i class="icon"></i>');
+                    this.$el.find('button.title').prepend('<i class="icon"></i>');
                 } else {
                     this.$el.find('button.title i.icon').remove();
                 }
