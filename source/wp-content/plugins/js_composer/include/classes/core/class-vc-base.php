@@ -477,6 +477,10 @@ class Vc_Base {
 		wp_register_script( 'flexslider', vc_asset_url( 'lib/flexslider/jquery.flexslider-min.js' ), array( 'jquery' ), WPB_VC_VERSION, true );
 		wp_register_script( 'prettyphoto', vc_asset_url( 'lib/prettyphoto/js/jquery.prettyPhoto.js' ), array( 'jquery' ), WPB_VC_VERSION, true );
 		wp_register_script( 'waypoints', vc_asset_url( 'lib/jquery-waypoints/waypoints.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true );
+
+		wp_register_script( 'kinetic', vc_asset_url( 'lib/spinning-wheel/kinetic-v5.0.1.min.js' ), array(), WPB_VC_VERSION, true );
+		wp_register_script( 'spinning-wheel', vc_asset_url( 'lib/spinning-wheel/spinning-wheel.js' ), array('kinetic', 'jquery'), WPB_VC_VERSION, true );
+
 		//wp_register_script( 'jcarousellite', vc_asset_url( 'js/jcarousellite_1.0.1.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true);
 		//wp_register_script( 'anythingslider', vc_asset_url( 'js/jquery.anythingslider.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true);
 	}

@@ -339,7 +339,7 @@ add_action('init', 'edexScripts'); // Add Custom Scripts to wp_head
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'edexStyles'); // Add Theme Stylesheet
 add_action('init', 'registerEdexMenu'); // Add HTML5 Blank Menu
-add_action('init', 'createPostTypePartner'); // Add our Partner Type
+//add_action('init', 'createPostTypePartner'); // Add our Partner Type
 //add_action('init', 'createPostTypeWheel'); // Add our Partner Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
@@ -390,7 +390,7 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 \*------------------------------------*/
 
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
-function createPostTypePartner()
+/*function createPostTypePartner()
 {
     register_post_type('partner', // Register Custom Post Type
         array(
@@ -418,7 +418,7 @@ function createPostTypePartner()
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true // Allows export in Tools > Export
     ));
-}
+}*/
 /*
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
 function createPostTypeWheel()

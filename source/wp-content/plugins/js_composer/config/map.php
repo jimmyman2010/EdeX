@@ -19,6 +19,19 @@ $colors_arr = array(
 	__( 'Black', 'js_composer' ) => "btn-inverse"
 );
 
+$wheel_icon = array(
+	__( 'SEO & Media', 'js_composer' ) => 'icon-seo',
+	__( 'Media buying', 'js_composer' ) => 'icon-media',
+	__( 'Website UX/UI', 'js_composer' ) => 'icon-website',
+	__( 'Social media', 'js_composer' ) => 'icon-social',
+	__( 'Branding', 'js_composer' ) => 'icon-branding',
+	__( 'Creative content', 'js_composer' ) => 'icon-creative',
+	__( 'Business & Partnerships development', 'js_composer' ) => "icon-business",
+	__( 'Communication planning', 'js_composer' ) => 'icon-communication',
+	__( 'Marketing Online & Offline', 'js_composer' ) => 'icon-marketing',
+	__( 'Research report & Analytics', 'js_composer' ) => 'icon-research'
+);
+
 $target_arr = array(
 	__( 'Same window', 'js_composer' ) => '_self',
 	__( 'New window', 'js_composer' ) => "_blank"
@@ -1171,7 +1184,7 @@ vc_map( array(
 	'base' => 'vc_wheel',
 	'show_settings_on_create' => false,
 	'is_container' => true,
-	'icon' => 'icon-wpb-ui-accordion',
+	'icon' => 'icon-wpb-vc_pie',
 	'category' => __( 'Content', 'js_composer' ),
 	'description' => __( 'Wheel content panels', 'js_composer' ),
 	'params' => array(
@@ -1215,6 +1228,31 @@ vc_map( array(
 			'param_name' => 'title',
 			'description' => __( 'Wheel piece title.', 'js_composer' )
 		),
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Label', 'js_composer' ),
+			'param_name' => 'label',
+			'description' => __( 'Label on the Wheel.', 'js_composer' )
+		),
+		array(
+			'type' => 'dropdown',
+			'heading' => __( 'Icon', 'js_composer' ),
+			'param_name' => 'icon',
+			'value' => $wheel_icon,
+			'description' => __( 'Select icon of this piece.', 'js_composer' )
+		),
+		array(
+			'type' => 'vc_link',
+			'heading' => __( 'URL (Link)', 'js_composer' ),
+			'param_name' => 'link',
+			'description' => __( 'Button link.', 'js_composer' )
+		),
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Extra class name', 'js_composer' ),
+			'param_name' => 'el_class',
+			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' )
+		)
 	),
 	'js_view' => 'VcWheelPieceView'
 ) );
