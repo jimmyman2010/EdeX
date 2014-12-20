@@ -3,7 +3,7 @@
 Plugin Name: Enhanced Media Library
 Plugin URI: http://wpUXsolutions.com
 Description: This plugin will be handy for those who need to manage a lot of media files.
-Version: 2.0.2.2
+Version: 2.0.3
 Author: wpUXsolutions
 Author URI: http://wpUXsolutions.com
 Text Domain: eml
@@ -21,7 +21,7 @@ global $wp_version;
 
 
 
-$wpuxss_eml_version     = '2.0.2.2';
+$wpuxss_eml_version     = '2.0.3';
 $wpuxss_eml_old_version = get_option('wpuxss_eml_version', false);
 $wpuxss_eml_dir         = plugin_dir_url( __FILE__ );
 $wpuxss_eml_path        = plugin_dir_path( __FILE__ );
@@ -204,15 +204,15 @@ function wpuxss_eml_enqueue_media() {
     
     global $wpuxss_eml_version,
            $wpuxss_eml_dir,
-           $wp_version;
+           $wp_version,
+           $current_screen;
            
            
     if ( ! is_admin() ) {
         return;
     }
        
-           
-    $screen = get_current_screen();  
+ 
     $media_library_mode = get_user_option( 'media_library_mode', get_current_user_id() ) ? get_user_option( 'media_library_mode', get_current_user_id() ) : 'grid';
 
 
@@ -226,7 +226,7 @@ function wpuxss_eml_enqueue_media() {
         $terms_array = array();
         $terms = array();
         
-        if ( $wpuxss_eml_taxonomies[$taxonomy->name]['media_uploader_filter'] )
+        if ( $wpuxss_eml_taxonomies[$taxonomy->name]['media_uploader_filter'] && function_exists( 'wp_terms_checklist' ) )
         {
 
             ob_start();
@@ -290,7 +290,7 @@ function wpuxss_eml_enqueue_media() {
     
     
     // scripts for grid view :: /wp-admin/upload.php    
-    if ( isset( $screen ) && 'upload' === $screen->base && 'grid' === $media_library_mode )
+    if ( isset( $current_screen ) && 'upload' === $current_screen->base && 'grid' === $media_library_mode )
     {
         wp_enqueue_script(
             'wpuxss-eml-media-grid-script',
@@ -302,7 +302,7 @@ function wpuxss_eml_enqueue_media() {
     }
     
     // scripts for Appearance -> Header
-    if ( isset( $screen ) && 'appearance_page_custom-header' === $screen->base ) {
+    if ( isset( $current_screen ) && 'appearance_page_custom-header' === $current_screen->base ) {
         
         wp_enqueue_script(
             'wpuxss-eml-custom-header-script',
@@ -314,7 +314,7 @@ function wpuxss_eml_enqueue_media() {
     }
     
     // scripts for Appearance -> Background
-    if ( isset( $screen ) && 'appearance_page_custom-background' === $screen->base ) {
+    if ( isset( $current_screen ) && 'appearance_page_custom-background' === $current_screen->base ) {
         
         wp_enqueue_script(
             'wpuxss-eml-custom-background-script',
@@ -327,7 +327,7 @@ function wpuxss_eml_enqueue_media() {
     
     
     // scripts for /wp-admin/customize.php
-    if ( isset( $screen ) && 'customize' === $screen->base ) 
+    if ( isset( $current_screen ) && 'customize' === $current_screen->base ) 
     {
         wp_enqueue_script(
             'wpuxss-eml-customize-controls-script',

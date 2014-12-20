@@ -564,10 +564,10 @@ function wpuxss_eml_print_credits()
             <p>What's new in <a href="http://wordpress.org/plugins/enhanced-media-library/changelog/">version <?php echo $wpuxss_eml_version; ?></a>.</p>
             
             <h4>Enhanced Media Library PRO</h4>
-            <p>More features under the hood <a href="http://wordpressuxsolutions.com/plugins/enhanced-media-library/">wordpressuxsolutions.com</a>.</p>
+            <p>More features under the hood <a href="http://www.wpuxsolutions.com/plugins/enhanced-media-library/">www.wpuxsolutions.com</a>.</p>
             
             <h4>Support</h4>
-            <p>Feel free to ask for help on <a href="http://wordpressuxsolutions.com/support/">wordpressuxsolutions.com</a>. Support is free for both versions of the plugin.</p>
+            <p>Feel free to ask for help on <a href="http://www.wpuxsolutions.com/support/">www.wpuxsolutions.com</a>. Support is free for both versions of the plugin.</p>
             
             <h4>Plugin rating</h4>
             <p>Please <a href="http://wordpress.org/support/view/plugin-reviews/enhanced-media-library">vote for the plugin</a>. Thanks!</p>
@@ -578,7 +578,7 @@ function wpuxss_eml_print_credits()
             </ul>
     
             <div class="author">
-                <span><a href="http://wordpressuxsolutions.com/">WordPress UX Solutions</a> by <a class="logo-webbistro" href="http://twitter.com/webbistro"><span class="icon-webbistro">@</span>webbistro</a></span>
+                <span><a href="http://www.wpuxsolutions.com/">wpUXsolutions</a> by <a class="logo-webbistro" href="http://twitter.com/webbistro"><span class="icon-webbistro">@</span>webbistro</a></span>
             </div>
     
         </div>

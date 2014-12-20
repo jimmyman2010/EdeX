@@ -289,12 +289,14 @@ function init() {
     var anim = new Kinetic.Animation(animate, layer);
 
     // wait one second and then spin the wheel
-    setTimeout(function() {
+    //setTimeout(function() {
         anim.start();
-    }, 1000);
+    //}, 1000);
 }
-init();
-
-$('.flexslider').flexslider({
-    animation: "slide"
+$(document).ready(function(){
+    init();
+    $('.flexslider').flexslider({
+        animation: "slide",
+        itemWidth: 300
+    });
 });

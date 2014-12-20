@@ -217,7 +217,6 @@ class Vc_Base {
 	 * @access public
 	 */
 	public function addMetaData() {
-		echo '<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>' . "\n";
 		// Add IE8 compatibility from WPExplorer: https://github.com/wpexplorer/visual-composer-ie8
 		echo '<!--[if IE 8]><link rel="stylesheet" type="text/css" href="'. vc_asset_url( 'css/vc-ie8.css' ) .'" media="screen"><![endif]-->';
 	}
@@ -479,7 +478,7 @@ class Vc_Base {
 		wp_register_script( 'waypoints', vc_asset_url( 'lib/jquery-waypoints/waypoints.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true );
 
 		wp_register_script( 'kinetic', vc_asset_url( 'lib/spinning-wheel/kinetic-v5.0.1.min.js' ), array(), WPB_VC_VERSION, true );
-		wp_register_script( 'spinning-wheel', vc_asset_url( 'lib/spinning-wheel/spinning-wheel.js' ), array('kinetic', 'jquery'), WPB_VC_VERSION, true );
+		wp_register_script( 'spinning-wheel', vc_asset_url( 'lib/spinning-wheel/spinning-wheel.js' ), array('kinetic', 'jquery', 'flexslider'), WPB_VC_VERSION, true );
 
 		//wp_register_script( 'jcarousellite', vc_asset_url( 'js/jcarousellite_1.0.1.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true);
 		//wp_register_script( 'anythingslider', vc_asset_url( 'js/jquery.anythingslider.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true);

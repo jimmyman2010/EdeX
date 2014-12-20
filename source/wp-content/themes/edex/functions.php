@@ -95,8 +95,17 @@ function edexScripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-        wp_register_script('libscript', get_template_directory_uri() . '/js/lib.min.js', array(), '0.1.0');
-        wp_enqueue_script('libscript'); // Enqueue it!
+        $noScript = array(
+            'jquery', 'jquery-core', 'jquery-migrate', 'jquery-ui-core', 'jquery-ui-accordion',
+            'jquery-ui-autocomplete', 'jquery-ui-button', 'jquery-ui-datepicker', 'jquery-ui-dialog',
+            'jquery-ui-draggable', 'jquery-ui-droppable', 'jquery-ui-menu', 'jquery-ui-mouse',
+            'jquery-ui-position', 'jquery-ui-progressbar', 'jquery-ui-resizable', 'jquery-ui-selectable',
+            'jquery-ui-slider', 'jquery-ui-sortable', 'jquery-ui-spinner', 'jquery-ui-tabs',
+            'jquery-ui-tooltip', 'jquery-ui-widget', 'underscore', 'backbone',
+        );
+        wp_deregister_script($noScript);
+
+        wp_register_script('jquery', get_template_directory_uri() . '/js/lib.min.js', array(), '0.1.0');
 
         wp_register_script('pluginsscript', get_template_directory_uri() . '/js/plugins.min.js', array(), '0.1.0', true);
         wp_enqueue_script('pluginsscript'); // Enqueue it!

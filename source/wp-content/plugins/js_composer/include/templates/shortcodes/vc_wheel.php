@@ -30,15 +30,15 @@ wp_enqueue_script( 'spinning-wheel' );
 
 <div class="container clearfix">
     <div class="wheel" id="wheel"></div>
-    <div class="content">
-        <ul class="flexslider">
+    <div class="flexslider">
+        <ul class="slides">
             <li class="item" data-identifier="0">
                 <h3>Education Export <br/>Services 0</h3>
                 <h4>Reseearch Support <br/>& Analytics</h4>
                 <p>Mauris viverra, nisl nec auctor laoreet, lacus justo consectetur lorem, sed faucibus elit elit ut tortor. Vestibulum rhoncus fringilla est, ut aliquam quam convallis sit amet. Mauris tempor dolor at tortor euismod, a commodo tellus elementum. Etiam consectetur mi quam, eu auctor ex auctor nec. Morbi finibus dolor vitae ultrices iaculis. Suspendisse ex elit, lacinia ut porttitor vel, laoreet a sem. Nulla volutpat suscipit egestas.</p>
                 <a href="javascript:void(0);" class="more">Learn more</a>
             </li>
-            <li class="item current" data-identifier="1">
+            <li class="item" data-identifier="1">
                 <h3>Education Export <br/>Services 1</h3>
                 <h4>Reseearch Support <br/>& Analytics</h4>
                 <p>Mauris viverra, nisl nec auctor laoreet, lacus justo consectetur lorem, sed faucibus elit elit ut tortor. Vestibulum rhoncus fringilla est, ut aliquam quam convallis sit amet. Mauris tempor dolor at tortor euismod, a commodo tellus elementum. Etiam consectetur mi quam, eu auctor ex auctor nec. Morbi finibus dolor vitae ultrices iaculis. Suspendisse ex elit, lacinia ut porttitor vel, laoreet a sem. Nulla volutpat suscipit egestas.</p>
