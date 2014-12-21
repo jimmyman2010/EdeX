@@ -64,9 +64,9 @@
 
 .footer{
     .logo-bottom{
-        padding: 58px 0 32px;
+        padding: 40px 0 28px;
         img{
-            height: auto;
+            height: 80px;
         }
     }
     .rabel-bottom {
@@ -83,10 +83,10 @@
                 }
                 li{
                     width: auto;
-                    padding:0;
+                    padding:0 0 0 15px;
                     border-top:none;
                     a{
-                        padding: 15px 0 15px 15px;
+                        padding: 15px 0;
                         color:white;
                         font-weight: bold;
                     }
@@ -99,5 +99,11 @@
         .navbar-brand {
             padding: 12px 0;
         }
+    }
+}
+
+.wheel-wrapper{
+    .wheel-content {
+        padding-left: 60px;
     }
 }

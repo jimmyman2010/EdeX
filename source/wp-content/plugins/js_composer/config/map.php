@@ -69,48 +69,6 @@ vc_map( array(
 			'description' => __( 'Select font color', 'js_composer' ),
 			'edit_field_class' => 'vc_col-md-6 vc_column'
 		),
-		/*
-   array(
-        'type' => 'colorpicker',
-        'heading' => __( 'Custom Background Color', 'js_composer' ),
-        'param_name' => 'bg_color',
-        'description' => __( 'Select backgound color for your row', 'js_composer' ),
-        'edit_field_class' => 'col-md-6'
-  ),
-  array(
-        'type' => 'textfield',
-        'heading' => __( 'Padding', 'js_composer' ),
-        'param_name' => 'padding',
-        'description' => __( 'You can use px, em, %, etc. or enter just number and it will use pixels.', 'js_composer' ),
-        'edit_field_class' => 'col-md-6'
-  ),
-  array(
-        'type' => 'textfield',
-        'heading' => __( 'Bottom margin', 'js_composer' ),
-        'param_name' => 'margin_bottom',
-        'description' => __( 'You can use px, em, %, etc. or enter just number and it will use pixels.', 'js_composer' ),
-        'edit_field_class' => 'col-md-6'
-  ),
-  array(
-        'type' => 'attach_image',
-        'heading' => __( 'Background Image', 'js_composer' ),
-        'param_name' => 'bg_image',
-        'description' => __( 'Select background image for your row', 'js_composer' )
-  ),
-  array(
-        'type' => 'dropdown',
-        'heading' => __( 'Background Repeat', 'js_composer' ),
-        'param_name' => 'bg_image_repeat',
-        'value' => array(
-                          __( 'Default', 'js_composer' ) => '',
-                          __( 'Cover', 'js_composer' ) => 'cover',
-					  __('Contain', 'js_composer') => 'contain',
-					  __('No Repeat', 'js_composer') => 'no-repeat'
-					),
-        'description' => __( 'Select how a background image will be repeated', 'js_composer' ),
-        'dependency' => array( 'element' => 'bg_image', 'not_empty' => true)
-  ),
-  */
 		array(
 			'type' => 'textfield',
 			'heading' => __( 'Extra class name', 'js_composer' ),
@@ -344,7 +302,6 @@ vc_map( array(
 	'icon' => 'icon-wpb-ui-separator',
 	'show_settings_on_create' => true,
 	'category' => __( 'Content', 'js_composer' ),
-//"controls"	=> 'popup_delete',
 	'description' => __( 'Horizontal separator line', 'js_composer' ),
 	'params' => array(
 		array(
@@ -1195,6 +1152,12 @@ vc_map( array(
 			'description' => __( 'Enter text which will be used as widget title. Leave blank if no title is needed.', 'js_composer' )
 		),
 		array(
+			'type' => 'vc_link',
+			'heading' => __( 'URL (Link)', 'js_composer' ),
+			'param_name' => 'link',
+			'description' => __( 'Button link.', 'js_composer' )
+		),
+		array(
 			'type' => 'textfield',
 			'heading' => __( 'Extra class name', 'js_composer' ),
 			'param_name' => 'el_class',
@@ -1235,17 +1198,18 @@ vc_map( array(
 			'description' => __( 'Label on the Wheel.', 'js_composer' )
 		),
 		array(
+			'type' => 'attach_image',
+			'heading' => __( 'Image', 'js_composer' ),
+			'param_name' => 'image',
+			'value' => '',
+			'description' => __( 'Select image from media library.', 'js_composer' )
+		),
+		array(
 			'type' => 'dropdown',
 			'heading' => __( 'Icon', 'js_composer' ),
 			'param_name' => 'icon',
 			'value' => $wheel_icon,
 			'description' => __( 'Select icon of this piece.', 'js_composer' )
-		),
-		array(
-			'type' => 'vc_link',
-			'heading' => __( 'URL (Link)', 'js_composer' ),
-			'param_name' => 'link',
-			'description' => __( 'Button link.', 'js_composer' )
 		),
 		array(
 			'type' => 'textfield',
@@ -1928,13 +1892,6 @@ vc_map( array(
 			'description' => __( 'Button color.', 'js_composer' ),
 			'param_holder_class' => 'vc_colored-dropdown'
 		),
-		/*array(
-			'type' => 'dropdown',
-			'heading' => __( 'Icon', 'js_composer' ),
-			'param_name' => 'icon',
-			'value' => getVcShared( 'icons' ),
-			'description' => __( 'Button icon.', 'js_composer' )
-  		),*/
 		array(
 			'type' => 'textfield',
 			'heading' => __( 'Extra class name', 'js_composer' ),
@@ -2030,7 +1987,6 @@ vc_map( array(
 			'type' => 'textfield',
 			'heading' => __( 'Heading first line', 'js_composer' ),
 			'admin_label' => true,
-			//'holder' => 'h2',
 			'param_name' => 'h2',
 			'value' => __( 'Hey! I am first heading line feel free to change me', 'js_composer' ),
 			'description' => __( 'Text for the first heading line.', 'js_composer' )
@@ -2038,8 +1994,6 @@ vc_map( array(
 		array(
 			'type' => 'textfield',
 			'heading' => __( 'Heading second line', 'js_composer' ),
-			//'holder' => 'h4',
-			//'admin_label' => true,
 			'param_name' => 'h4',
 			'value' => '',
 			'description' => __( 'Optional text for the second heading line.', 'js_composer' )
@@ -2073,8 +2027,6 @@ vc_map( array(
 		),
 		array(
 			'type' => 'textarea_html',
-			//holder' => 'div',
-			//'admin_label' => true,
 			'heading' => __( 'Promotional text', 'js_composer' ),
 			'param_name' => 'content',
 			'value' => __( 'I am promo text. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'js_composer' )
@@ -2088,8 +2040,6 @@ vc_map( array(
 		array(
 			'type' => 'textfield',
 			'heading' => __( 'Text on the button', 'js_composer' ),
-			//'holder' => 'button',
-			//'class' => 'wpb_button',
 			'param_name' => 'title',
 			'value' => __( 'Text on the button', 'js_composer' ),
 			'description' => __( 'Text on the button.', 'js_composer' )
@@ -2109,13 +2059,6 @@ vc_map( array(
 			'description' => __( 'Button color.', 'js_composer' ),
 			'param_holder_class' => 'vc_colored-dropdown'
 		),
-		/*array(
-        'type' => 'dropdown',
-        'heading' => __( 'Icon', 'js_composer' ),
-        'param_name' => 'icon',
-        'value' => getVcShared( 'icons' ),
-        'description' => __( 'Button icon.', 'js_composer' )
-  ),*/
 		array(
 			'type' => 'dropdown',
 			'heading' => __( 'Button position', 'js_composer' ),
@@ -3088,36 +3031,27 @@ vc_map( array(
                     'font_size',
                     'line_height',
                     'color',
-                    //'font_style_italic'
-                    //'font_style_bold'
-                    //'font_family'
 
                     'tag_description' => __('Select element tag.','js_composer'),
                     'text_align_description' => __('Select text alignment.','js_composer'),
                     'font_size_description' => __('Enter font size.','js_composer'),
                     'line_height_description' => __('Enter line height.','js_composer'),
-                    'color_description' => __('Select color for your element.','js_composer'),
-                    //'font_style_description' => __('Put your description here','js_composer'),
-                    //'font_family_description' => __('Put your description here','js_composer'),
+                    'color_description' => __('Select color for your element.','js_composer')
                 ),
-            ),
-           // 'description' => __( '', 'js_composer' ),
+            )
         ),
         array(
             'type' => 'google_fonts',
             'param_name' => 'google_fonts',
             'value' => '',// Not recommended, this will override 'settings'. 'font_family:'.rawurlencode('Exo:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic').'|font_style:'.rawurlencode('900 bold italic:900:italic'),
             'settings' => array(
-                //'no_font_style' // Method 1: To disable font style
-                //'no_font_style'=>true // Method 2: To disable font style
                 'fields'=>array(
                     'font_family'=>'Abril Fatface:regular', //'Exo:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic',// Default font family and all available styles to fetch
                     'font_style'=>'400 regular:400:normal', // Default font style. Name:weight:style, example: "800 bold regular:800:normal"
                     'font_family_description' => __('Select font family.','js_composer'),
                     'font_style_description' => __('Select font styling.','js_composer')
                 )
-            ),
-           // 'description' => __( '', 'js_composer' ),
+            )
         ),
         array(
             'type' => 'textfield',
@@ -3129,7 +3063,6 @@ vc_map( array(
             'type' => 'css_editor',
             'heading' => __( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
             'group' => __( 'Design options', 'js_composer' )
         )
     ),
@@ -3139,7 +3072,8 @@ vc_map( array(
 class VcSharedLibrary {
 	// Here we will store plugin wise (shared) settings. Colors, Locations, Sizes, etc...
 	private static $colors = array(
-		'Blue' => 'blue', // Why __( 'Blue', 'js_composer' ) doesn't work?
+		'Edex' => 'edex',
+		'Blue' => 'blue',
 		'Turquoise' => 'turquoise',
 		'Pink' => 'pink',
 		'Violet' => 'violet',

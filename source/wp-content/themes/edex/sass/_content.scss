@@ -3,3 +3,180 @@
         font-family: 'Orbitron-Regular', sans-serif;
     }
 }
+.wheel-wrapper{
+    .wheel{
+        position: relative;
+        &:after{
+            content: ' ';
+            display: block;
+            width:28px; height:37px;
+            background: url(images/icons/icon-sprite.png) no-repeat -511px 0;
+            position: absolute;
+            right:-20px;
+            top: 50%;
+            margin-top: -19px;
+        }
+    }
+    .wheel-content{
+        padding:0 0 10px;
+        position: relative;
+        .wheel-title{
+            font-size:28px;
+            color:#010101;
+            margin:0 0 25px;
+            line-height: 32px;
+            width: 300px;
+        }
+        .bxslider{
+            position: relative;
+        }
+        .slides{
+            padding: 0;
+            li{
+                float: left;
+                list-style: none;
+                display: none;
+                &:first-child{
+                    display: block;
+                }
+            }
+        }
+        .item{
+            .wheel-slide-title {
+                font-size: 38px;
+                position: relative;
+                padding-left: 80px;
+                margin: 0 0 18px;
+                min-height: 82px;
+                color: white;
+                &:before {
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    content: ' ';
+                    display: block;
+                    width: 65px;
+                    height: 65px;
+                    background: url(images/icons/icon-sprite.png) no-repeat;
+                    @include background-size(356px auto);
+                }
+                &.icon-seo{
+                    padding-top: 18px;
+                    &:before{
+                    }
+                }
+                &.icon-media{
+                    padding-top: 18px;
+                    &:before{
+                        background-position: -67px 0;
+                    }
+                }
+                &.icon-website{
+                    padding-top: 18px;
+                    &:before{
+                        background-position: -136px 0;
+                    }
+                }
+                &.icon-social{
+                    padding-top: 18px;
+                    &:before{
+                        background-position: -203px 0;
+                    }
+                }
+                &.icon-branding{
+                    padding-top: 18px;
+                    &:before{
+                        background-position: 0 -69px;
+                    }
+                }
+                &.icon-creative{
+                    padding-top: 18px;
+                    &:before{
+                        background-position: -1px -135px;
+                    }
+                }
+                &.icon-business{
+                    &:before{
+                        background-position: -66px -69px;
+                    }
+                }
+                &.icon-communication{
+                    &:before{
+                        background-position: -133px -63px;
+                    }
+                }
+                &.icon-marketing{
+                    padding-top: 18px;
+                    &:before{
+                        background-position: -204px -69px;
+                    }
+                }
+                &.icon-research{
+                    &:before{
+                        background-position: -69px -135px;
+                    }
+                }
+            }
+            .wheel-slide-content{
+                color: black;
+                line-height: 22px;
+                .wpb_content_element{
+                    margin-bottom:70px;
+                }
+                .vc_btn{
+                    position: absolute;
+                    bottom:0;
+                    padding-left:36px;
+                    &:before{
+                        position: absolute;
+                        top:11px;
+                        left: 17px;
+                        content: ' ';
+                        display: block;
+                        width:9px; height:15px;
+                        background: url(images/icons/icon-sprite.png) no-repeat -592px -88px;
+                    }
+                }
+            }
+        }
+        .bx-pager{
+            bottom: 15px;
+            right:20px;
+            width: auto;
+            li{
+                margin: 0 4px;
+            }
+            a{
+                background: url(images/icons/icon-sprite.png) no-repeat -493px -58px;
+                width:18px;
+                height:18px;
+                &.active{
+                    background-position: -526px -58px;
+                }
+            }
+        }
+        .wheel-link{
+            color:white;
+            position: absolute;
+            bottom:10px;
+            padding-left: 48px;
+            padding-right: 20px;
+            display: inline-block;
+            height:39px;
+            line-height: 39px;
+            @include border-radius(10px 10px);
+            &:before{
+                position: absolute;
+                top: 5px; left: 8px;
+                content: ' ';
+                display:block;
+                width:29px; height:29px;
+                background: url(images/icons/icon-sprite.png) no-repeat -571px -38px;
+            }
+            &:hover{
+                text-decoration: none;
+                background-color: #095760;
+            }
+        }
+    }
+}

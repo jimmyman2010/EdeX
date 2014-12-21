@@ -10,7 +10,7 @@ var FONT_SIZE = 14;
 var BACKGROUND_NORMAL = '#02b6b7';
 var BACKGROUND_ACTIVE = '#095761';
 
-var DATA_WHEEL = [
+/*var DATA_WHEEL = [
     {text: 'MARKETING\nOnline &\nOffline', image: '/img/branding00.png'},
     {text: 'BRANDING', image: '/img/branding01.png'},
     {text: 'WEBSITE\nUX/UI', image: '/img/branding02.png'},
@@ -21,7 +21,7 @@ var DATA_WHEEL = [
     {text: 'COMMUNICATION\nPLANNING', image: '/img/branding07.png'},
     {text: 'CREATIVE\nCONTENT', image: '/img/branding08.png'},
     {text: 'SOCIAL\nMEDIA', image: '/img/branding09.png'}
-];
+];*/
 var NUM_WEDGES = DATA_WHEEL.length;
 
 // to improve performance to loading image
@@ -46,10 +46,9 @@ var controlled = false;
 var egdeText = 0;
 var textList = [];
 var wedgeBackgroundList = [];
-var pagination = $('.pagination');
-var introduction = $('.introduction');
+var clickSlider = false;
 
-var target, activeWedge, stage, layer, wheel, imageObj, startRotation, startX, startY;
+var wheelSlider, target, activeWedge, stage, layer, wheel, imageObj, startRotation, startX, startY;
 
 function bind() {
     wheel.on('mousedown', function(evt) {
@@ -111,7 +110,11 @@ function setActiveWedge(n)
     var tween = new Kinetic.Tween({
         node : wheel,
         rotation : angleDiff,
-        duration: 1
+        duration: 1,
+        onFinish:function(){
+            this.destroy();
+            clickSlider = false;
+        }
     });
     tween.play();
 }
@@ -175,7 +178,10 @@ function animate(frame) {
         var tween = new Kinetic.Tween({
             node : textList[index],
             rotation : -(textList[index].parent.parent.attrs.rotation + (360/NUM_WEDGES)*index),
-            duration: 0.1
+            duration: 0.1,
+            onFinish:function(){
+                this.destroy();
+            }
         });
         tween.play();
     }
@@ -199,11 +205,9 @@ function animate(frame) {
             textList[index].fontStyle('normal');
         }
         activeWedge.parent.children[1].fontStyle('bold');
-
-        introduction.find('.current').removeClass('current');
-        introduction.find('.item[data-identifier="'+activeWedge.identifier+'"]').addClass('current');
-        pagination.find('.current').removeClass('current');
-        pagination.find('a[data-identifier="'+activeWedge.identifier+'"]').addClass('current');
+        if(!clickSlider) {
+            wheelSlider.goToSlide(activeWedge.identifier);
+        }
     }
 
 
@@ -242,7 +246,7 @@ function init() {
         x: WHEEL_RADIUS*2-5,
         y: WHEEL_RADIUS,
         radius: 5,
-        fill: 'red'
+        fill: 'white'
     });
 
     // add components to the stage
@@ -294,9 +298,16 @@ function init() {
     //}, 1000);
 }
 $(document).ready(function(){
-    init();
-    $('.flexslider').flexslider({
-        animation: "slide",
-        itemWidth: 300
+    var wow = $(window).width();
+    var itemFlexWidth = (wow < 768) ? wow *70/100 : 0;
+
+    wheelSlider = $('#wheelSlider > ul').bxSlider({
+        controls: false,
+        speed: 1000
     });
+    $('#wheelSlider').on('click touchend', '.bx-pager-item a', function(){
+        clickSlider = true;
+        setActiveWedge(parseInt($(this).data('slide-index'), 10));
+    });
+    init();
 });

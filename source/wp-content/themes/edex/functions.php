@@ -96,12 +96,12 @@ function edexScripts()
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
         $noScript = array(
-            'jquery', 'jquery-core', 'jquery-migrate', 'jquery-ui-core', 'jquery-ui-accordion',
+            'jquery', 'jquery-core', 'jquery-migrate',
             'jquery-ui-autocomplete', 'jquery-ui-button', 'jquery-ui-datepicker', 'jquery-ui-dialog',
             'jquery-ui-draggable', 'jquery-ui-droppable', 'jquery-ui-menu', 'jquery-ui-mouse',
             'jquery-ui-position', 'jquery-ui-progressbar', 'jquery-ui-resizable', 'jquery-ui-selectable',
             'jquery-ui-slider', 'jquery-ui-sortable', 'jquery-ui-spinner', 'jquery-ui-tabs',
-            'jquery-ui-tooltip', 'jquery-ui-widget', 'underscore', 'backbone',
+            'jquery-ui-tooltip', 'underscore', 'backbone',
         );
         wp_deregister_script($noScript);
 
@@ -483,4 +483,13 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
-?>
+/*------------------------------------*\
+	Utils Functions
+\*------------------------------------*/
+
+function edexWheelText($text)
+{
+    $text = str_replace("{br}","\\n",$text);
+    $text = str_replace("&amp;","&",$text);
+    return $text;
+}

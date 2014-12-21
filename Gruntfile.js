@@ -84,7 +84,9 @@ module.exports = function(grunt) {
 					"source/wp-content/plugins/js_composer/assets/css/js_composer_frontend_editor.css": "source/wp-content/plugins/js_composer/assets/less/js_composer_frontend_editor.less",
 					"source/wp-content/plugins/js_composer/assets/css/js_composer_frontend_editor_iframe.css": "source/wp-content/plugins/js_composer/assets/less/js_composer_frontend_editor_iframe.less",
 					"source/wp-content/plugins/js_composer/assets/css/js_composer_settings.css": "source/wp-content/plugins/js_composer/assets/less/js_composer_settings.less",
-					"source/wp-content/plugins/js_composer/assets/css/tpl_js_composer.css": "source/wp-content/plugins/js_composer/assets/less/tpl_js_composer.less"
+					"source/wp-content/plugins/js_composer/assets/css/tpl_js_composer.css": "source/wp-content/plugins/js_composer/assets/less/tpl_js_composer.less",
+
+					"source/wp-content/plugins/js_composer/assets/lib/flexslider/flexslider.css": "source/wp-content/plugins/js_composer/assets/lib/flexslider/flexslider.less"
 				}
 			}
 		},
@@ -95,7 +97,7 @@ module.exports = function(grunt) {
 			},
 			css:{
 				files: ['source/wp-content/themes/edex/sass/*.scss'],
-				tasks: ['compass', 'csslint', 'cssmin']
+				tasks: ['compass', 'cssmin']
 			},
 			less:{
 				files: ['source/wp-content/plugins/js_composer/assets/less/*.less'],
