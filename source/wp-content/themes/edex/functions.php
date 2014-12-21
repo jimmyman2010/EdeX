@@ -103,7 +103,7 @@ function edexScripts()
             'jquery-ui-slider', 'jquery-ui-sortable', 'jquery-ui-spinner', 'jquery-ui-tabs',
             'jquery-ui-tooltip', 'underscore', 'backbone',
         );
-        wp_deregister_script($noScript);
+        wp_deregister_script('jquery');
 
         wp_register_script('jquery', get_template_directory_uri() . '/js/lib.min.js', array(), '0.1.0');
 

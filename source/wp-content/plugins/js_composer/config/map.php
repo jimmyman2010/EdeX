@@ -10,13 +10,15 @@ $vc_is_wp_version_3_6_more = version_compare( preg_replace( '/^([\d\.]+)(\-.*$)/
 
 // Used in "Button", "Call __( 'Blue', 'js_composer' )to Action", "Pie chart" blocks
 $colors_arr = array(
-	__( 'Grey', 'js_composer' ) => 'wpb_button',
-	__( 'Blue', 'js_composer' ) => 'btn-primary',
+	__( 'Dark Grey', 'js_composer' ) => 'btn-dark-grey',
+	__( 'Grey', 'js_composer' ) => 'btn-grey',
+	__( 'Dark Blue', 'js_composer' ) => 'btn-dark-blue',
+	/*__( 'Blue', 'js_composer' ) => 'btn-primary',
 	__( 'Turquoise', 'js_composer' ) => 'btn-info',
 	__( 'Green', 'js_composer' ) => 'btn-success',
 	__( 'Orange', 'js_composer' ) => 'btn-warning',
 	__( 'Red', 'js_composer' ) => 'btn-danger',
-	__( 'Black', 'js_composer' ) => "btn-inverse"
+	__( 'Black', 'js_composer' ) => "btn-inverse"*/
 );
 
 $wheel_icon = array(

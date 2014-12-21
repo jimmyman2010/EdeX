@@ -1,10 +1,85 @@
 .vc_row{
+    &.wpb_row, .wpb_content_element{
+        margin: 0;
+    }
     h1,h2,h3,h4,h5,h6{
         font-family: 'Orbitron-Regular', sans-serif;
+        margin-bottom: 28px;
+    }
+    h2{
+        font-size: 42px;
+    }
+    h3{
+        font-size:32px;
+    }
+    .wpb_button{
+        margin-top: 30px !important;
+        padding: 0 20px 0 5px;
+        height: 39px;
+        line-height: 39px;
+        i{
+            width:29px; height:29px;
+            background: url(images/icons/icon-sprite.png) no-repeat -571px -38px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        &.wpb_btn-dark-grey{
+            color:#2d4243;
+            i {
+                background-position: -474px -123px;
+            }
+        }
+        &.wpb_btn-grey{
+            color:#2b544e;
+            i {
+                background-position: -516px -123px;
+            }
+        }
+        &.wpb_btn-dark-blue{
+            color:#455576;
+            i {
+                background-position: -556px -123px;
+            }
+        }
+        &.contact-person{
+            i{
+                background-position: -573px 1px;
+            }
+            &.wpb_btn-dark-grey{
+                color:#2d4243;
+                i {
+                    background-position: -473px -85px;
+                }
+            }
+            &.wpb_btn-grey{
+                color:#2b544e;
+                i {
+                    background-position: -513px -85px;
+                }
+            }
+            &.wpb_btn-dark-blue{
+                color:#455576;
+                i {
+                    background-position: -552px -85px;
+                }
+            }
+            &:hover{
+                i{
+                    background-position: -573px 1px !important;
+                }
+            }
+        }
+        &:hover{
+            color:white !important;
+            i{
+                background-position: -571px -38px !important;
+            }
+        }
     }
 }
 .wheel-wrapper{
     .wheel{
+        display: none;
         position: relative;
         &:after{
             content: ' ';
@@ -32,7 +107,7 @@
         }
         .slides{
             padding: 0;
-            li{
+            > div{
                 float: left;
                 list-style: none;
                 display: none;
@@ -61,12 +136,10 @@
                     @include background-size(356px auto);
                 }
                 &.icon-seo{
-                    padding-top: 18px;
                     &:before{
                     }
                 }
                 &.icon-media{
-                    padding-top: 18px;
                     &:before{
                         background-position: -67px 0;
                     }
@@ -90,7 +163,6 @@
                     }
                 }
                 &.icon-creative{
-                    padding-top: 18px;
                     &:before{
                         background-position: -1px -135px;
                     }
@@ -140,9 +212,6 @@
             }
         }
         .bx-pager{
-            bottom: 15px;
-            right:20px;
-            width: auto;
             li{
                 margin: 0 4px;
             }
@@ -158,7 +227,7 @@
         .wheel-link{
             color:white;
             position: absolute;
-            bottom:10px;
+            bottom:-20px;
             padding-left: 48px;
             padding-right: 20px;
             display: inline-block;

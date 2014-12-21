@@ -103,7 +103,31 @@
 }
 
 .wheel-wrapper{
+    .wheel{
+        display: block;
+    }
     .wheel-content {
         padding-left: 60px;
+        .item {
+            .wheel-slide-title {
+                &.icon-seo{
+                    padding-top: 18px;
+                }
+                &.icon-media{
+                    padding-top: 18px;
+                }
+                &.icon-creative{
+                    padding-top: 18px;
+                }
+            }
+        }
+        .bx-pager {
+            bottom: 15px;
+            right: 20px;
+            width: auto;
+        }
+        .wheel-link{
+            bottom:10px;
+        }
     }
 }

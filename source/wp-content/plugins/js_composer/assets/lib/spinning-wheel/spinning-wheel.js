@@ -22,10 +22,11 @@ var BACKGROUND_ACTIVE = '#095761';
     {text: 'CREATIVE\nCONTENT', image: '/img/branding08.png'},
     {text: 'SOCIAL\nMEDIA', image: '/img/branding09.png'}
 ];*/
-var NUM_WEDGES = DATA_WHEEL.length;
+var NUM_WEDGES = 0;
 
 // to improve performance to loading image
-loadFirst();
+if (typeof DATA_WHEEL != 'undefined')
+    loadFirst();
 function loadFirst() {
     var div = document.createElement('div');
     div.style.display = 'none';
@@ -213,6 +214,10 @@ function animate(frame) {
 
 }
 function init() {
+    if (typeof DATA_WHEEL == 'undefined')
+        return;
+    NUM_WEDGES = DATA_WHEEL.length;
+
     stage = new Kinetic.Stage({
         container: ID_CONTAINER,
         width: WHEEL_RADIUS*2,
@@ -301,13 +306,14 @@ $(document).ready(function(){
     var wow = $(window).width();
     var itemFlexWidth = (wow < 768) ? wow *70/100 : 0;
 
-    wheelSlider = $('#wheelSlider > ul').bxSlider({
+    wheelSlider = $('#wheelSlider > div').bxSlider({
         controls: false,
-        speed: 1000
+        speed: 800
     });
-    $('#wheelSlider').on('click touchend', '.bx-pager-item a', function(){
+    $('#wheelSlider').on('click touchend', '.bx-pager-item a', function () {
         clickSlider = true;
         setActiveWedge(parseInt($(this).data('slide-index'), 10));
     });
+
     init();
 });
