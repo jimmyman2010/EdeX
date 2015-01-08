@@ -42,21 +42,23 @@
 							</div>
 						</div>
 					</div>
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-header" aria-expanded="false" aria-controls="navbar-header">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="javascript:void(0);">MENU</a>
-					</div>
+					<div class="navbar-move">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-header" aria-expanded="false" aria-controls="navbar-header">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="javascript:void(0);">MENU</a>
+						</div>
 
-					<!-- nav -->
-					<nav class="navigation" role="navigation">
-						<?php edexNavigation(); ?>
-					</nav>
-					<!-- /nav -->
+						<!-- nav -->
+						<nav class="navigation" role="navigation">
+							<?php edexNavigation(); ?>
+						</nav>
+						<!-- /nav -->
+					</div>
 				</div>
 			</header>
 			<!-- /header -->

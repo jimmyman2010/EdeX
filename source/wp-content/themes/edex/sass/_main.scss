@@ -35,6 +35,12 @@
 .textcenter{
     text-align: center;
 }
+.floatleft{
+    float: left !important;
+}
+.floatright{
+    float: right !important;
+}
 img {
     max-width:100%;
     vertical-align:bottom;
@@ -54,7 +60,25 @@ input:focus {
     outline:0;
     border:1px solid #04A4CC;
 }
-body {
+.wrapper {
     font: 16px 'Opensans-Regular', sans-serif;
     @include background-image(linear-gradient(to right, #3db65b, #10b8ac, #10b0bf, #1899d1));
+}
+.vc_col-sm-6, .vc_col-sm-12{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+@media (min-width: 768px) {
+    .wrapper {
+        width: 1170px;
+    }
+    .vc_col-sm-6, .vc_col-sm-12{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+@media (min-width: 1170px) {
+    .wrapper {
+        width: auto;
+    }
 }

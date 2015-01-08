@@ -10,11 +10,17 @@
             padding: 0;
             float:right;
             .navbar-social{
-                float:none;
                 margin: 22px 0 18px;
+                position: static;
+                width: auto;
+                top: auto;
+                border-top: none;
+                padding-top: inherit;
+                a{
+                    margin-left: 8px;
+                }
             }
             .contact-us{
-                float:none;
                 position: absolute;
                 right: 0;
                 bottom: -42px;
@@ -58,6 +64,40 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.navbar-move.fixed{
+    background-color: #000011;
+    .navigation .navbar-collapse {
+        width: 1170px;
+        ul{
+            margin-right: 130px;
+        }
+        li {
+            margin: 8px 2px;
+        }
+    }
+}
+.navbar-fixed {
+    .header .top-header {
+        margin-bottom: 51px;
+        .logo {
+            position: fixed;
+            z-index: 1030;
+            top: 5px;
+            img {
+                height: 45px;
+            }
+        }
+        .top-nav .contact-us{
+            position: fixed;
+            z-index: 1040;
+            top: 0;
+            right: auto;
+            bottom: auto;
+            margin-top: 8px;
         }
     }
 }
@@ -107,7 +147,7 @@
         display: block;
     }
     .wheel-content {
-        padding-left: 60px;
+        padding-left: 60px !important;
         .item {
             .wheel-slide-title {
                 &.icon-seo{

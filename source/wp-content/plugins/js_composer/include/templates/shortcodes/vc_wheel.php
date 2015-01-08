@@ -29,9 +29,9 @@ $el_class = $this->getExtraClass($el_class);
 $css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'wheel-wrapper clearfix ' . $el_class . ' not-column-inherit', $this->settings['base'], $atts );
 
 $output .= "\n".'<div class="'.$css_class.'">';
-$output .= "\n\t".'<div class="wheel col-md-6" id="wheel">';
+$output .= "\n\t".'<div class="wheel vc_col-sm-6" id="wheel">';
 $output .= "\n\t".'</div>'.$this->endBlockComment('.wheel');
-$output .= "\n\t".'<div class="wheel-content col-md-6 col-sm-12">';
+$output .= "\n\t".'<div class="wheel-content vc_col-sm-6">';
 $output .= "\n\t\t".'<h2 class="wheel-title">'. $title .'</h2>';
 $output .= "\n\t\t".'<div id="wheelSlider" class="bxslider">';
 $output .= "\n\t\t\t".'<div class="slides clearfix">';
