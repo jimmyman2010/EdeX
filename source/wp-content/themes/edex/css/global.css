@@ -399,7 +399,7 @@ article .vc_row {
 
 /* line 136, ../sass/_structure.scss */
 main {
-  margin: 45px 0 0;
+  margin: 20px 0 0;
 }
 
 /* footer */
@@ -773,6 +773,25 @@ main {
   background-color: #095760;
 }
 
+/* line 252, ../sass/_content.scss */
+.image-left-box {
+  padding: 0 0 20px;
+}
+/* line 255, ../sass/_content.scss */
+.image-left-box .container .vc_column_container:first-child {
+  margin-top: -18px;
+}
+
+/* line 260, ../sass/_content.scss */
+.image-right-box {
+  padding: 20px 0;
+}
+
+/* line 264, ../sass/_content.scss */
+.contact-footer {
+  padding: 50px;
+}
+
 @media only screen and (min-width: 768px) {
   /* line 2, ../sass/_tablet.scss */
   .header .top-header {
@@ -892,19 +911,46 @@ main {
     margin-top: 8px;
   }
 
-  /* line 106, ../sass/_tablet.scss */
+  /* line 105, ../sass/_tablet.scss */
+  main {
+    margin: 45px 0 0;
+  }
+
+  /* line 109, ../sass/_tablet.scss */
+  .image-left-box {
+    padding: 0;
+  }
+  /* line 112, ../sass/_tablet.scss */
+  .image-left-box .container .vc_column_container:first-child {
+    margin-top: -25px;
+  }
+  /* line 115, ../sass/_tablet.scss */
+  .image-left-box .container .vc_column_container:last-child {
+    padding-top: 60px;
+  }
+
+  /* line 121, ../sass/_tablet.scss */
+  .image-right-box {
+    padding: 72px 0 45px;
+  }
+  /* line 123, ../sass/_tablet.scss */
+  .image-right-box .container .vc_column_container:first-child {
+    float: right;
+  }
+
+  /* line 129, ../sass/_tablet.scss */
   .footer .logo-bottom {
     padding: 40px 0 28px;
   }
-  /* line 108, ../sass/_tablet.scss */
+  /* line 131, ../sass/_tablet.scss */
   .footer .logo-bottom img {
     height: 80px;
   }
-  /* line 113, ../sass/_tablet.scss */
+  /* line 136, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation {
     position: relative;
   }
-  /* line 115, ../sass/_tablet.scss */
+  /* line 138, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation .navbar-collapse {
     background-color: inherit;
     bottom: -60px;
@@ -912,58 +958,58 @@ main {
     width: auto;
     right: 0;
   }
-  /* line 121, ../sass/_tablet.scss */
+  /* line 144, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation .navbar-collapse ul {
     margin: inherit;
   }
-  /* line 124, ../sass/_tablet.scss */
+  /* line 147, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation .navbar-collapse li {
     width: auto;
     padding: 0 0 0 15px;
     border-top: none;
   }
-  /* line 128, ../sass/_tablet.scss */
+  /* line 151, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation .navbar-collapse li a {
     padding: 15px 0;
     color: white;
     font-weight: bold;
   }
-  /* line 137, ../sass/_tablet.scss */
+  /* line 160, ../sass/_tablet.scss */
   .footer .navbar-footer {
     margin: 0;
   }
-  /* line 139, ../sass/_tablet.scss */
+  /* line 162, ../sass/_tablet.scss */
   .footer .navbar-footer .navbar-brand {
     padding: 12px 0;
   }
 
-  /* line 146, ../sass/_tablet.scss */
+  /* line 169, ../sass/_tablet.scss */
   .wheel-wrapper .wheel {
     display: block;
   }
-  /* line 149, ../sass/_tablet.scss */
+  /* line 172, ../sass/_tablet.scss */
   .wheel-wrapper .wheel-content {
     padding-left: 60px !important;
   }
-  /* line 153, ../sass/_tablet.scss */
+  /* line 176, ../sass/_tablet.scss */
   .wheel-wrapper .wheel-content .item .wheel-slide-title.icon-seo {
     padding-top: 18px;
   }
-  /* line 156, ../sass/_tablet.scss */
+  /* line 179, ../sass/_tablet.scss */
   .wheel-wrapper .wheel-content .item .wheel-slide-title.icon-media {
     padding-top: 18px;
   }
-  /* line 159, ../sass/_tablet.scss */
+  /* line 182, ../sass/_tablet.scss */
   .wheel-wrapper .wheel-content .item .wheel-slide-title.icon-creative {
     padding-top: 18px;
   }
-  /* line 164, ../sass/_tablet.scss */
+  /* line 187, ../sass/_tablet.scss */
   .wheel-wrapper .wheel-content .bx-pager {
     bottom: 15px;
     right: 20px;
     width: auto;
   }
-  /* line 169, ../sass/_tablet.scss */
+  /* line 192, ../sass/_tablet.scss */
   .wheel-wrapper .wheel-content .wheel-link {
     bottom: 10px;
   }

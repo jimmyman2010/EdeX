@@ -102,6 +102,29 @@
     }
 }
 
+main{
+    margin: 45px 0 0;
+}
+
+.image-left-box{
+    padding: 0;
+    .container .vc_column_container {
+        &:first-child {
+            margin-top: -25px;
+        }
+        &:last-child{
+            padding-top: 60px;
+        }
+    }
+}
+
+.image-right-box{
+    padding: 72px 0 45px;
+    .container .vc_column_container:first-child{
+        float: right;
+    }
+}
+
 .footer{
     .logo-bottom{
         padding: 40px 0 28px;

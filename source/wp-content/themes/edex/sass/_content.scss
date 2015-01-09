@@ -249,3 +249,18 @@
         }
     }
 }
+.image-left-box{
+    padding: 0 0 20px;
+    .container .vc_column_container {
+        &:first-child {
+            margin-top: -18px;
+        }
+    }
+}
+.image-right-box{
+    padding: 20px 0;
+}
+
+.contact-footer{
+    padding: 50px;
+}
