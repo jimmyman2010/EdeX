@@ -1,8 +1,8 @@
 <?php
 wp_enqueue_script('jquery-ui-accordion');
 wp_enqueue_script( 'kinetic' );
-wp_enqueue_style( 'bxslider' );
-wp_enqueue_script( 'bxslider' );
+wp_enqueue_style( 'swipejs' );
+wp_enqueue_script( 'swipejs' );
 wp_enqueue_script( 'spinning-wheel' );
 $output = $title = $interval = $el_class = $collapsible = $active_tab = '';
 //
@@ -33,12 +33,12 @@ $output .= "\n\t".'<div class="wheel vc_col-sm-6" id="wheel">';
 $output .= "\n\t".'</div>'.$this->endBlockComment('.wheel');
 $output .= "\n\t".'<div class="wheel-content vc_col-sm-6">';
 $output .= "\n\t\t".'<h2 class="wheel-title">'. $title .'</h2>';
-$output .= "\n\t\t".'<div id="wheelSlider" class="bxslider">';
-$output .= "\n\t\t\t".'<div class="slides clearfix">';
+$output .= "\n\t\t".'<div id="wheelSlider" class="swipe">';
+$output .= "\n\t\t\t".'<div class="swipe-wrap clearfix">';
 $output .= "\n\t\t\t\t".wpb_js_remove_wpautop($content);
 $output .= "\n\t\t\t".'</div>';
 $output .= "\n\t\t".'</div>'.$this->endBlockComment('.flexslider');
-$output .= "\n\t\t".'<a class="wheel-link" href="'.$a_href.'" target="'.$a_target.'" title="'.$a_title.'">'. $a_title .'</a>';
+$output .= "\n\t\t".'<div class="wheel-pagination"></div><a class="wheel-link" href="'.$a_href.'" target="'.$a_target.'" title="'.$a_title.'">'. $a_title .'</a>';
 $output .= "\n\t".'</div>';
 $output .= "\n".'</div>'.$this->endBlockComment('.wheel-wrapper');
 

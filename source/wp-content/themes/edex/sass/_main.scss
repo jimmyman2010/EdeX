@@ -56,12 +56,42 @@ a {
         outline: 0;
     }
 }
-input:focus {
-    outline:0;
-    border:1px solid #04A4CC;
+
+input[type="text"], input[type="email"], input[type="tel"]{
+    background: #fff;
+    height: 46px;
+    line-height: 46px;
+    width: 100%;
+    padding: 0 16px;
+    border: none;
 }
+
+input[type="submit"], input[type="button"], button{
+    background: #0b4c4e;
+    border: none;
+    color: #fff;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    padding: 0 16px;
+    font-weight: bold;
+}
+
+input:focus, textarea:focus {
+    outline:0;
+}
+
+textarea{
+    background: #fff;
+    line-height: 24px;
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+}
+
+
 .wrapper {
-    font: 16px 'Opensans-Regular', sans-serif;
+    font: 15px 'Opensans-Regular', sans-serif;
     @include background-image(linear-gradient(to right, #3db65b, #10b8ac, #10b0bf, #1899d1));
 }
 .vc_col-sm-6, .vc_col-sm-12{
@@ -71,6 +101,7 @@ input:focus {
 @media (min-width: 768px) {
     .wrapper {
         width: 1170px;
+        font-size: 16px;
     }
     .vc_col-sm-6, .vc_col-sm-12{
         padding-left: 15px !important;

@@ -72,8 +72,9 @@
     background-color: #000011;
     .navigation .navbar-collapse {
         width: 1170px;
+        margin: 0 auto;
         ul{
-            margin-right: 130px;
+            margin-right: 210px;
         }
         li {
             margin: 8px 2px;
@@ -106,6 +107,123 @@ main{
     margin: 45px 0 0;
 }
 
+.vc_row {
+    h2{
+        font-size: 42px;
+    }
+    h3{
+        font-size:32px;
+    }
+    .wpb_button {
+        margin-top: 30px !important;
+    }
+}
+
+.wheel-wrapper{
+    .wheel{
+        display: block;
+    }
+    .wheel-content {
+        padding-left: 60px !important;
+        .wheel-title{
+            font-size: 28px;
+        }
+        .item {
+            .wheel-slide-title {
+                font-size: 38px;
+                padding-left: 80px;
+                min-height: 82px;
+                &:before {
+                    width: 65px;
+                    height: 65px;
+                    @include background-size(356px auto);
+                }
+                &.icon-seo{
+                    padding-top: 16px;
+                    &:before{
+                    }
+                }
+                &.icon-media{
+                    padding-top: 20px;
+                    &:before{
+                        background-position: -68px 0;
+                    }
+                }
+                &.icon-website{
+                    padding-top: 18px;
+                    &:before{
+                        background-position: -135px 0;
+                    }
+                }
+                &.icon-social{
+                    padding-top: 18px;
+                    &:before{
+                        background-position: -203px 0;
+                    }
+                }
+                &.icon-branding{
+                    padding-top: 20px;
+                    &:before{
+                        background-position: 0 -69px;
+                    }
+                }
+                &.icon-creative{
+                    padding-top: 20px;
+                    &:before{
+                        background-position: -1px -135px;
+                        background-size: 355px auto;
+                        top: 5px;
+                    }
+                }
+                &.icon-business{
+                    font-size: 28px;
+                    padding-top: 10px;
+                    &:before{
+                        background-position: -68px -68px;
+                    }
+                }
+                &.icon-communication{
+                    font-size: 36px;
+                    &:before{
+                        background-position: -132px -68px;
+                        top: 9px;
+                    }
+                }
+                &.icon-marketing{
+                    padding-top: 18px;
+                    &:before{
+                        background-position: -205px -67px;
+                    }
+                }
+                &.icon-research{
+                    font-size: 34px;
+                    padding-top: 10px;
+                    &:before{
+                        background-position: -70px -134px;
+                        background-size: 362px auto;
+                    }
+                }
+            }
+        }
+        .wheel-pagination{
+            position: absolute;
+            bottom: 82px;
+            right: 15px;
+        }
+        .wheel-link{
+            margin-top:30px;
+        }
+    }
+}
+
+.wheel-box{
+    padding: 0 0 30px;
+}
+
+.contact-person-box{
+    padding:40px 0 50px;
+}
+
 .image-left-box{
     padding: 0;
     .container .vc_column_container {
@@ -122,6 +240,32 @@ main{
     padding: 72px 0 45px;
     .container .vc_column_container:first-child{
         float: right;
+    }
+}
+
+.clients-box{
+    padding: 40px 0;
+    text-align: center;
+    h2{
+        margin-bottom:40px;
+    }
+    .clients-text{
+        margin-top:40px;
+    }
+}
+
+.contact-form-box{
+    padding: 26px 0 66px;
+    .cu-title{
+        text-align: center;
+        color: #fff;
+    }
+    .cu-bottom{
+        padding-top: 30px;
+        input{
+            min-width: 300px;
+            width: auto;
+        }
     }
 }
 
@@ -161,36 +305,6 @@ main{
         margin: 0;
         .navbar-brand {
             padding: 12px 0;
-        }
-    }
-}
-
-.wheel-wrapper{
-    .wheel{
-        display: block;
-    }
-    .wheel-content {
-        padding-left: 60px !important;
-        .item {
-            .wheel-slide-title {
-                &.icon-seo{
-                    padding-top: 18px;
-                }
-                &.icon-media{
-                    padding-top: 18px;
-                }
-                &.icon-creative{
-                    padding-top: 18px;
-                }
-            }
-        }
-        .bx-pager {
-            bottom: 15px;
-            right: 20px;
-            width: auto;
-        }
-        .wheel-link{
-            bottom:10px;
         }
     }
 }

@@ -426,7 +426,8 @@ class Vc_Base {
 	 */
 	public function frontCss() {
 		wp_register_style( 'flexslider', vc_asset_url( 'lib/flexslider/flexslider.css' ), false, WPB_VC_VERSION, 'screen' );
-		wp_register_style( 'bxslider', vc_asset_url( 'lib/bxslider/jquery.bxslider.css' ), false, WPB_VC_VERSION, 'screen' );
+		wp_register_style( 'swipejs', vc_asset_url( 'lib/swipejs/style.css' ), false, WPB_VC_VERSION, 'screen' );
+		wp_register_style( 'slick', vc_asset_url( 'lib/slick/slick.css' ), false, WPB_VC_VERSION, 'screen' );
 		wp_register_style( 'nivo-slider-css', vc_asset_url( 'lib/nivoslider/nivo-slider.css' ), false, WPB_VC_VERSION, 'screen' );
 		wp_register_style( 'nivo-slider-theme', vc_asset_url( 'lib/nivoslider/themes/default/default.css' ), array( 'nivo-slider-css' ), WPB_VC_VERSION, 'screen' );
 		wp_register_style( 'prettyphoto', vc_asset_url( 'lib/prettyphoto/css/prettyPhoto.css' ), false, WPB_VC_VERSION, 'screen' );
@@ -479,8 +480,9 @@ class Vc_Base {
 		wp_register_script( 'waypoints', vc_asset_url( 'lib/jquery-waypoints/waypoints.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true );
 
 		wp_register_script( 'kinetic', vc_asset_url( 'lib/spinning-wheel/kinetic-v5.0.1.min.js' ), array(), WPB_VC_VERSION, true );
-		wp_register_script( 'bxslider', vc_asset_url( 'lib/bxslider/jquery.bxslider.js' ), array('jquery'), WPB_VC_VERSION, true );
-		wp_register_script( 'spinning-wheel', vc_asset_url( 'lib/spinning-wheel/spinning-wheel.js' ), array('kinetic', 'jquery', 'bxslider'), WPB_VC_VERSION, true );
+		wp_register_script( 'swipejs', vc_asset_url( 'lib/swipejs/swipe.js' ), array(), WPB_VC_VERSION, true );
+		wp_register_script( 'slick', vc_asset_url( 'lib/slick/slick.min.js' ), array('jquery'), WPB_VC_VERSION, true );
+		wp_register_script( 'spinning-wheel', vc_asset_url( 'lib/spinning-wheel/spinning-wheel.js' ), array('kinetic', 'jquery', 'swipejs'), WPB_VC_VERSION, true );
 
 		//wp_register_script( 'jcarousellite', vc_asset_url( 'js/jcarousellite_1.0.1.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true);
 		//wp_register_script( 'anythingslider', vc_asset_url( 'js/jquery.anythingslider.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true);
