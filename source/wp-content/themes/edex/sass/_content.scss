@@ -154,7 +154,7 @@
                 &.icon-creative{
                     &:before{
                         background-position: -1px -110px;
-                        background-size: 288px auto;
+                        @include background-size(288px auto);
                         top: 5px;
                     }
                 }
@@ -166,6 +166,7 @@
                 }
                 &.icon-communication{
                     font-size: 23px;
+                    max-width: 320px;
                     &:before{
                         background-position: -112px -57px;
                         top: 0;
@@ -180,6 +181,7 @@
                 &.icon-research{
                     font-size: 22px;
                     padding-top: 10px;
+                    max-width: 282px;
                     &:before{
                         background-position: -61px -118px;
                     }
@@ -190,7 +192,6 @@
                 line-height: 22px;
                 .vc_btn{
                     position: relative;
-                    bottom:0;
                     padding-left:36px;
                     margin-top: 20px;
                     &:before{
@@ -271,13 +272,21 @@
         color: #0a4c5c;
         margin-bottom:30px;
     }
+    .partner-slider{
+        .item{
+            img{
+                width: 120px;
+                margin: 0 auto;
+            }
+        }
+    }
     .clients-text{
         margin-top:30px;
     }
 }
 
 .contact-form-box{
-    padding: 26px 0 50px;
+    padding: 26px 0 20px;
     .cu-title{
         text-align: center;
         color: #fff;
@@ -293,6 +302,69 @@
         margin-top: 18px;
         input{
             width: 100%;
+        }
+    }
+}
+
+.content-slider{
+    &.slick-slider {
+        margin: 0;
+    }
+    .item{
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                position: relative;
+                padding-left:34px;
+                margin-top: 15px;
+                list-style: none;
+                &:first-child{
+                    margin-top: 0;
+                }
+                &:before{
+                    position: absolute;
+                    top: 0; left: 0;
+                    content: ' ';
+                    display:block;
+                    width:22px; height:22px;
+                    background: url(images/icons/icon-sprite.png) no-repeat -361px -23px;
+                    background-size: 380px auto;
+                }
+            }
+        }
+        ol{
+            li{
+                margin-top: 15px;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .slick-dots{
+        position: static;
+        bottom: auto;
+        padding: 10px 0;
+        margin: 0;
+        li{
+            height: auto;
+            width: auto;
+            margin: 0;
+            button{
+                text-indent: -999px;
+                display: inline-block;
+                background: url(images/icons/icon-sprite.png) no-repeat -493px -58px;
+                width:18px;
+                height:18px;
+                overflow: hidden;
+                margin: 10px 4px;
+            }
+            &.slick-active{
+                button{
+                    background-position: -526px -58px;
+                }
+            }
         }
     }
 }

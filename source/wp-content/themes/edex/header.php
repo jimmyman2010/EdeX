@@ -38,7 +38,7 @@
 								<a class="fa fa-google-plus" href="#"></a>
 							</div>
 							<div class="contact-us">
-								<a href="#">Contact us</a>
+								<a href="<?php echo get_page_link(29); ?>">Contact us</a>
 							</div>
 						</div>
 					</div>

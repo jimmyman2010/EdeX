@@ -481,8 +481,11 @@ class Vc_Base {
 
 		wp_register_script( 'kinetic', vc_asset_url( 'lib/spinning-wheel/kinetic-v5.0.1.min.js' ), array(), WPB_VC_VERSION, true );
 		wp_register_script( 'swipejs', vc_asset_url( 'lib/swipejs/swipe.js' ), array(), WPB_VC_VERSION, true );
-		wp_register_script( 'slick', vc_asset_url( 'lib/slick/slick.min.js' ), array('jquery'), WPB_VC_VERSION, true );
 		wp_register_script( 'spinning-wheel', vc_asset_url( 'lib/spinning-wheel/spinning-wheel.js' ), array('kinetic', 'jquery', 'swipejs'), WPB_VC_VERSION, true );
+
+
+		wp_register_script( 'slick', vc_asset_url( 'lib/slick/slick.min.js' ), array('jquery'), WPB_VC_VERSION, true );
+		wp_register_script( 'slick-fire', vc_asset_url( 'lib/slick/slick-fire.js' ), array('jquery', 'slick'), WPB_VC_VERSION, true );
 
 		//wp_register_script( 'jcarousellite', vc_asset_url( 'js/jcarousellite_1.0.1.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true);
 		//wp_register_script( 'anythingslider', vc_asset_url( 'js/jquery.anythingslider.min.js' ), array( 'jquery' ), WPB_VC_VERSION, true);

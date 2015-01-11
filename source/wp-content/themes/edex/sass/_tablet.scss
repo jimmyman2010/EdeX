@@ -104,7 +104,7 @@
 }
 
 main{
-    margin: 45px 0 0;
+    margin: 45px 0;
 }
 
 .vc_row {
@@ -171,7 +171,7 @@ main{
                     padding-top: 20px;
                     &:before{
                         background-position: -1px -135px;
-                        background-size: 355px auto;
+                        @include background-size(355px auto);
                         top: 5px;
                     }
                 }
@@ -184,6 +184,7 @@ main{
                 }
                 &.icon-communication{
                     font-size: 36px;
+                    max-width: 420px;
                     &:before{
                         background-position: -132px -68px;
                         top: 9px;
@@ -198,9 +199,10 @@ main{
                 &.icon-research{
                     font-size: 34px;
                     padding-top: 10px;
+                    max-width: 420px;
                     &:before{
                         background-position: -70px -134px;
-                        background-size: 362px auto;
+                        @include background-size(362px auto);
                     }
                 }
             }
@@ -249,13 +251,23 @@ main{
     h2{
         margin-bottom:40px;
     }
+    .partner-slider{
+        .item{
+            img{
+                width: auto;
+            }
+        }
+        .slick-slider{
+        }
+    }
     .clients-text{
         margin-top:40px;
+        padding: 0 80px;
     }
 }
 
 .contact-form-box{
-    padding: 26px 0 66px;
+    padding: 26px 0;
     .cu-title{
         text-align: center;
         color: #fff;
@@ -265,6 +277,21 @@ main{
         input{
             min-width: 300px;
             width: auto;
+        }
+    }
+}
+
+.content-slider{
+    .item{
+        ul{
+            li{
+                padding-right:20px;
+            }
+        }
+        ol{
+            li{
+                padding-right:20px;
+            }
         }
     }
 }

@@ -1223,6 +1223,67 @@ vc_map( array(
 	'js_view' => 'VcWheelPieceView'
 ) );
 
+/* Content slider block
+---------------------------------------------------------- */
+vc_map( array(
+	'name' => __( 'Content Slider', 'js_composer' ),
+	'base' => 'vc_content_slider',
+	'show_settings_on_create' => false,
+	'is_container' => true,
+	'icon' => 'icon-wpb-slideshow',
+	'category' => __( 'Content', 'js_composer' ),
+	'description' => __( 'Content slider panels', 'js_composer' ),
+	'params' => array(
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Widget title', 'js_composer' ),
+			'param_name' => 'title',
+			'description' => __( 'Enter text which will be used as widget title. Leave blank if no title is needed.', 'js_composer' )
+		),
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Extra class name', 'js_composer' ),
+			'param_name' => 'el_class',
+			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' )
+		)
+	),
+	'custom_markup' => '
+<div class="wpb_accordion_holder wpb_holder clearfix vc_container_for_children">
+%content%
+</div>
+<div class="tab_controls">
+    <a class="add_tab" title="' . __( 'Add item', 'js_composer' ) . '"><span class="vc_icon"></span> <span class="tab-label">' . __( 'Add item', 'js_composer' ) . '</span></a>
+</div>
+',
+	'default_content' => '
+    [vc_content_item title="' . __( 'Item 1', 'js_composer' ) . '"][/vc_content_item]
+    [vc_content_item title="' . __( 'Item 2', 'js_composer' ) . '"][/vc_content_item]
+',
+	'js_view' => 'VcContentSliderView'
+) );
+vc_map( array(
+	'name' => __( 'Content Item', 'js_composer' ),
+	'base' => 'vc_content_item',
+	'allowed_container_element' => 'vc_row',
+	'is_container' => true,
+	'content_element' => false,
+	'params' => array(
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Title', 'js_composer' ),
+			'param_name' => 'title',
+			'description' => __( 'Content item title.', 'js_composer' )
+		),
+		array(
+			'type' => 'textfield',
+			'heading' => __( 'Extra class name', 'js_composer' ),
+			'param_name' => 'el_class',
+			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' )
+		)
+	),
+	'js_view' => 'VcContentItemView'
+) );
+
 /* Teaser grid
 * @deprecated please use vc_posts_grid
 ---------------------------------------------------------- */

@@ -16,10 +16,8 @@
 @import "wp_core";
 @import "structure";
 @import "content";
+@import "smartphone";
 
-@media only screen and (min-width:667px) {
-	@import "smartphone";
-}
 @media only screen and (min-width:768px) {
 	@import "tablet";
 }
