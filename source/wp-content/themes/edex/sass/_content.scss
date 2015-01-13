@@ -297,12 +297,31 @@
     .cu-right textarea{
         height: 158px;
     }
+    .cu-left, .cu-right{
+        > span{
+            display:block;
+            span{
+                font-size: 13px;
+                position: absolute;
+                top: 4px;
+                padding: 10px 20px;
+                right: 0;
+            }
+        }
+        > br{
+            display: none;
+        }
+    }
     .cu-bottom{
         text-align: center;
         margin-top: 18px;
         input{
             width: 100%;
         }
+    }
+    .wpcf7-response-output{
+        float: left;
+        color: #fff;
     }
 }
 

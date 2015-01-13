@@ -272,12 +272,23 @@ main{
         text-align: center;
         color: #fff;
     }
+    .cu-left, .cu-right{
+        > span span{
+            font-size: 16px;
+            top: 2px;
+        }
+    }
     .cu-bottom{
         padding-top: 30px;
         input{
             min-width: 300px;
             width: auto;
         }
+    }
+    .wpcf7-response-output{
+        position: absolute;
+        bottom: 42px;
+        left: 22px;
     }
 }
 
