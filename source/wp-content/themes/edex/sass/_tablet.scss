@@ -250,6 +250,7 @@ main{
     text-align: center;
     h2{
         margin-bottom:40px;
+        text-transform: uppercase;
     }
     .partner-slider{
         .item{
@@ -263,6 +264,17 @@ main{
     .clients-text{
         margin-top:40px;
         padding: 0 80px;
+    }
+    .vc_carousel {
+        ol.vc_carousel-indicators {
+
+        }
+        .vc_item{
+            .entry-content {
+                padding: 15px 120px 0;
+                font-size: 18px;
+            }
+        }
     }
 }
 

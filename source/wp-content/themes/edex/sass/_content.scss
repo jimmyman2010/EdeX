@@ -269,6 +269,7 @@
     border-top: 7px solid #e5e5e5;
     padding: 30px 0;
     h2{
+        text-align: center;
         color: #0a4c5c;
         margin-bottom:30px;
     }
@@ -282,6 +283,34 @@
     }
     .clients-text{
         margin-top:30px;
+    }
+    .vc_carousel {
+        padding-bottom: 30px;
+        ol.vc_carousel-indicators {
+            bottom: -30px;
+            li{
+                background: url(images/icons/icon-sprite.png) no-repeat -493px -177px;
+                width:18px;
+                height:18px;
+                overflow: hidden;
+                margin: 10px 4px;
+                border: none;
+                @include transition(none);
+                &.vc_active{
+                    background-position: -526px -177px;
+                }
+            }
+        }
+        .vc_item{
+            text-align: center;
+            .entry-content {
+                padding: 20px 50px 0;
+                line-height: 26px;
+                font-size: 16px;
+                font-style: italic;
+                color: #2D4243;
+            }
+        }
     }
 }
 

@@ -348,7 +348,7 @@ add_action('init', 'edexScripts'); // Add Custom Scripts to wp_head
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'edexStyles'); // Add Theme Stylesheet
 add_action('init', 'registerEdexMenu'); // Add HTML5 Blank Menu
-//add_action('init', 'createPostTypePartner'); // Add our Partner Type
+add_action('init', 'createPostTypeTestimonial'); // Add our Testimonial Type
 //add_action('init', 'createPostTypeWheel'); // Add our Partner Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
@@ -399,35 +399,38 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 \*------------------------------------*/
 
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
-/*function createPostTypePartner()
+function createPostTypeTestimonial()
 {
-    register_post_type('partner', // Register Custom Post Type
+    register_post_type('testimonial', // Register Custom Post Type
         array(
-        'labels' => array(
-            'name' => __('Partner', 'html5blank'), // Rename these to suit
-            'singular_name' => __('Partner', 'html5blank'),
-            'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New Partner', 'html5blank'),
-            'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit Partner', 'html5blank'),
-            'new_item' => __('New Partner', 'html5blank'),
-            'view' => __('View Partner', 'html5blank'),
-            'view_item' => __('View Partner', 'html5blank'),
-            'search_items' => __('Search Partner', 'html5blank'),
-            'not_found' => __('No Partner found', 'html5blank'),
-            'not_found_in_trash' => __('No Partner found in Trash', 'html5blank')
-        ),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true // Allows export in Tools > Export
-    ));
-}*/
+            'labels' => array(
+                'name' => __('Testimonials', 'html5blank'), // Rename these to suit
+                'singular_name' => __('Testimonial', 'html5blank'),
+                'add_new' => __('Add New', 'html5blank'),
+                'add_new_item' => __('Add New Testimonial', 'html5blank'),
+                'edit' => __('Edit', 'html5blank'),
+                'edit_item' => __('Edit Testimonial', 'html5blank'),
+                'new_item' => __('New Testimonial', 'html5blank'),
+                'view' => __('View Testimonial', 'html5blank'),
+                'view_item' => __('View Testimonial', 'html5blank'),
+                'search_items' => __('Search Testimonial', 'html5blank'),
+                'not_found' => __('No Testimonial found', 'html5blank'),
+                'not_found_in_trash' => __('No Testimonial found in Trash', 'html5blank')
+            ),
+            'public' => true,
+            'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-groups',
+            'supports' => array(
+                'title',
+                'editor',
+                //'excerpt',
+                'thumbnail'
+            ), // Go to Dashboard Custom HTML5 Blank post for supports
+            'can_export' => true // Allows export in Tools > Export
+        )
+    );
+}
 /*
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
 function createPostTypeWheel()
