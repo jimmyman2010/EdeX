@@ -83,6 +83,13 @@ textarea{
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
+.nav>li>a {
+    &:focus, &:hover {
+        background: none;
+    }
+}
+
 @media (min-width: 768px) {
     .wrapper {
         width: 1170px;

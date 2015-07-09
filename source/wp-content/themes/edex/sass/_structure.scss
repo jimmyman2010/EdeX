@@ -134,11 +134,96 @@ article .vc_row{
 }
 
 main{
-    margin: 20px 0 30px;
+    @include clearfix;
+    &.has-sidebar{
+        background: #fff;
+        ~ footer{
+            margin-top: 0;
+            .logo-bottom{
+                display: none;
+            }
+        }
+    }
+}
+
+.sidebar {
+    .sidebar-widget {
+        > div{
+            margin: 30px 0 50px;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+            }
+        }
+        h3{
+            font: 23px Orbitron-Regular,sans-serif;
+            margin: 0 0 10px;
+            color: #065e62;
+        }
+        .widget_search {
+            form{
+                position: relative;
+            }
+            input{
+                width: 100%;
+                border: 1px solid #c7c7c7;
+                height: 35px;
+                line-height: 35px;
+                padding: 0 35px 0 10px;
+                @include border-radius(10px);
+            }
+            button{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 40px;
+                height: 35px;
+                background: url(images/icons/icon-sprite.png) -268px -100px no-repeat;
+                background-size: 300px;
+                font-size: 0;
+            }
+        }
+        .widget_recent_entries, .my_widget_recent_entries{
+            color: #04b6b7;
+            li{
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #c7c7c7;
+                &:first-child{
+                    margin-top: 0;
+                    padding-top: 0;
+                    border-top: none;
+                }
+            }
+            span{
+                display: block;
+                font-size: 14px;
+                padding-top: 3px;
+            }
+            a{
+                color: #2e0303;
+            }
+        }
+        .widget_categories, .widget_archive{
+            color: #2e0303;
+            li{
+                padding: 3px 0;
+            }
+            a{
+                color: #04b6b7;
+            }
+        }
+    }
 }
 
 /* footer */
 .footer {
+    margin-top: 10px;
     .logo-bottom{
         background-color: white;
         text-align: center;

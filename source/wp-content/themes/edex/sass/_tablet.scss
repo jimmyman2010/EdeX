@@ -104,7 +104,23 @@
 }
 
 main{
-    margin: 45px 0;
+    &.has-sidebar{
+        padding: 20px 0;
+        .container {
+            > section {
+                float: right;
+                width: 826px;
+                margin-right: 15px;
+            }
+            > aside {
+                float: left;
+                width: 260px;
+                margin-left: 15px;
+                border-right: 1px solid #e6e6e6;
+                padding-right: 24px;
+            }
+        }
+    }
 }
 
 .vc_row {
@@ -120,6 +136,7 @@ main{
 }
 
 .wheel-wrapper{
+    margin: 45px 0;
     .wheel{
         display: block;
     }
