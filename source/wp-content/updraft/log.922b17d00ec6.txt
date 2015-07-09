@@ -1,0 +1,154 @@
+0000.000 (0) Opened log file at time: Wed, 08 Jul 2015 12:07:51 +0000 on http://edex.martintutko.com
+0000.019 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.10.3 WP: 4.0.1 PHP: 5.6.5 (Linux apache-it11-28 3.14.27-031427-generic #201412170558 SMP Wed Dec 17 11:00:01 UTC 2014 x86_64) MySQL:  Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 3.8M | 4M) multisite: N mcrypt: Y LANG: en_US.UTF-8 ZipArchive::addFile: Y
+0000.021 (0) Free space on disk containing Updraft's temporary directory: 19352.8 Mb
+0000.023 (0) Tasks: Backup files: 1 (schedule: manual) Backup DB: 1 (schedule: manual)
+0000.041 (0) Requesting semaphore lock (fd)
+0000.053 (0) Set semaphore last lock (fd) time to 2015-07-08 12:07:51
+0000.055 (0) Semaphore lock (fd) complete
+0000.094 (0) Backup run: resumption=0, nonce=922b17d00ec6, begun at=1436357271 (0s ago), job type=backup
+0000.111 (0) Scheduling a resumption (1) after 300 seconds (1436357571) in case this run gets aborted
+0000.150 (0) Checking if we have a zip executable available
+0000.155 (0) Testing: /usr/bin/zip
+0000.181 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.189 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.195 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.202 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=128) (out=105) (deflated 18%)
+0000.207 (0) Output: total bytes=128, compressed=105 -> 18% savings
+0000.228 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=135) (out=111) (deflated 18%)
+0000.233 (0) Output: total bytes=263, compressed=216 -> 18% savings
+0000.239 (0) Working binary zip found: /usr/bin/zip
+0000.244 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.247 (0) Creation of backups of directories: beginning
+0000.260 (0) Beginning creation of dump of plugins (split every: 500 Mb)
+0002.006 (0) Total entities for the zip file: 340 directories, 2081 files (0 skipped as non-modified), 25.1 Mb
+0002.013 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0002.019 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 200 files added (on-disk size: 0 Kb)
+0002.025 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 300 files added (on-disk size: 0 Kb)
+0002.031 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 400 files added (on-disk size: 0 Kb)
+0002.036 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 500 files added (on-disk size: 0 Kb)
+0002.038 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.8 Mb, 2081 files batched, 501 (501) added so far); re-opening (prior size: 0 Kb)
+0013.741 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: size is now: 1.60 Mb
+0013.747 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 600 files added (on-disk size: 1630.2 Kb)
+0013.750 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 700 files added (on-disk size: 1630.2 Kb)
+0013.754 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 800 files added (on-disk size: 1630.2 Kb)
+0013.758 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 900 files added (on-disk size: 1630.2 Kb)
+0013.762 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1000 files added (on-disk size: 1630.2 Kb)
+0013.763 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.6 Mb, 2081 files batched, 501 (1002) added so far); re-opening (prior size: 1630.2 Kb)
+0027.802 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: size is now: 4.10 Mb
+0027.811 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1100 files added (on-disk size: 4155.7 Kb)
+0027.818 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1200 files added (on-disk size: 4155.7 Kb)
+0027.825 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1300 files added (on-disk size: 4155.7 Kb)
+0027.833 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1400 files added (on-disk size: 4155.7 Kb)
+0027.857 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1500 files added (on-disk size: 4155.7 Kb)
+0027.859 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (13 Mb, 2081 files batched, 501 (1503) added so far); re-opening (prior size: 4155.7 Kb)
+0038.156 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: size is now: 8.10 Mb
+0038.170 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1600 files added (on-disk size: 8246 Kb)
+0038.175 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1700 files added (on-disk size: 8246 Kb)
+0038.179 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1800 files added (on-disk size: 8246 Kb)
+0038.184 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 1900 files added (on-disk size: 8246 Kb)
+0038.197 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip.tmp: 2000 files added (on-disk size: 8246 Kb)
+0038.201 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.8 Mb, 2081 files batched, 501 (2004) added so far); re-opening (prior size: 8246 Kb)
+0044.746 (0) Created plugins zip (0) - 9328.5 Kb in 44.5 s (209.7 Kb/s) (SHA1 checksum: c24c1575d80d163c49f9138843ef62a01dff48f6)
+0044.761 (0) Beginning creation of dump of themes (split every: 500 Mb)
+0044.799 (0) Total entities for the zip file: 12 directories, 85 files (0 skipped as non-modified), 5.2 Mb
+0047.117 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-themes.zip.tmp: size is now: 1.10 Mb
+0047.150 (0) Created themes zip (0) - 1079.2 Kb in 2.4 s (454 Kb/s) (SHA1 checksum: 6b7e34182d724b2c43d804e50c76494044711a74)
+0047.159 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0047.167 (0) Looking for candidates to back up in: /nfsmnt/hosting2_2/c/8/c8751f20-40de-4227-89c9-ee6d8800e9ce/martintutko.com/sub/edex/wp-content/uploads
+0047.170 (0) finding files: js_composer: adding to list (1)
+0047.173 (0) finding files: 2014: adding to list (2)
+0047.175 (0) finding files: 2015: adding to list (3)
+0047.177 (0) Beginning creation of dump of uploads (split every: 500 Mb)
+0047.195 (0) Total entities for the zip file: 11 directories, 101 files (0 skipped as non-modified), 9.1 Mb
+0047.199 (0) Zip: backup_2015-07-08-1207_EDEX_922b17d00ec6-uploads.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0050.157 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-uploads.zip.tmp: size is now: 9.10 Mb
+0050.301 (0) Created uploads zip (0) - 9303.3 Kb in 3.1 s (2980.8 Kb/s) (SHA1 checksum: c9b5a4fef54f93ba446d0a62e4d7953c231b30c3)
+0050.306 (0) Beginning backup of other directories found in the content directory (index: 0)
+0050.308 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups
+0050.310 (0) Looking for candidates to back up in: /nfsmnt/hosting2_2/c/8/c8751f20-40de-4227-89c9-ee6d8800e9ce/martintutko.com/sub/edex/wp-content
+0050.311 (0) finding files: plugins: skipping: this is the plugins directory
+0050.314 (0) finding files: index.php: adding to list (1)
+0050.315 (0) finding files: themes: skipping: this is the themes directory
+0050.317 (0) finding files: upgrade: skipping: excluded by options
+0050.319 (0) finding files: uploads: skipping: this is the uploads directory
+0050.320 (0) finding files: updraft: skipping: this is the updraft directory
+0050.326 (0) Total entities for the zip file: 0 directories, 1 files (0 skipped as non-modified), 0 Mb
+0050.356 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-others.zip.tmp: size is now: 0.00 Mb
+0050.362 (0) Created others zip (0) - 0.2 Kb in 0 s (5 Kb/s) (SHA1 checksum: d06444b69633d45a37eb16e03402fe5e769be929)
+0050.370 (0) Saving backup status to database (elements: 8)
+0050.374 (0) Beginning creation of database dump (WordPress DB)
+0050.377 (0) Testing: /usr/bin/mysqldump
+0050.868 (0) Binary mysqldump: error (code: 2)
+0050.965 (0) Table ex_options: Total expected rows (approximate): 360
+0051.064 (0) Table ex_options: Total rows added: 223 in 0.10 seconds
+0051.066 (0) Table ex_options: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_options.table.gz - 152.5 Kb)
+0051.116 (0) Table ex_users: Total expected rows (approximate): 2
+0051.126 (0) Table ex_users: Total rows added: 2 in 0.01 seconds
+0051.128 (0) Table ex_users: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_users.table.gz - 0.6 Kb)
+0051.214 (0) Table ex_usermeta: Total expected rows (approximate): 38
+0051.238 (0) Table ex_usermeta: Total rows added: 38 in 0.02 seconds
+0051.245 (0) Table ex_usermeta: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_usermeta.table.gz - 1.2 Kb)
+0051.341 (0) Table ex_commentmeta: Total expected rows (approximate): 0
+0051.354 (0) Table ex_commentmeta: Total rows added: 0 in 0.01 seconds
+0051.356 (0) Table ex_commentmeta: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_commentmeta.table.gz - 0.3 Kb)
+0051.458 (0) Table ex_comments: Total expected rows (approximate): 1
+0051.467 (0) Table ex_comments: Total rows added: 1 in 0.01 seconds
+0051.468 (0) Table ex_comments: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_comments.table.gz - 0.6 Kb)
+0051.564 (0) Table ex_links: Total expected rows (approximate): 0
+0051.571 (0) Table ex_links: Total rows added: 0 in 0.00 seconds
+0051.572 (0) Table ex_links: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_links.table.gz - 0.4 Kb)
+0051.612 (0) Table ex_postmeta: Total expected rows (approximate): 236
+0051.631 (0) Table ex_postmeta: Total rows added: 216 in 0.02 seconds
+0051.634 (0) Table ex_postmeta: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_postmeta.table.gz - 4.7 Kb)
+0051.693 (0) Table ex_posts: Total expected rows (approximate): 97
+0051.863 (0) Table ex_posts: Total rows added: 102 in 0.17 seconds
+0051.865 (0) Table ex_posts: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_posts.table.gz - 30.5 Kb)
+0051.926 (0) Table ex_term_relationships: Total expected rows (approximate): 9
+0051.933 (0) Table ex_term_relationships: Total rows added: 9 in 0.01 seconds
+0051.934 (0) Table ex_term_relationships: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_term_relationships.table.gz - 0.4 Kb)
+0051.960 (0) Table ex_term_taxonomy: Total expected rows (approximate): 4
+0051.967 (0) Table ex_term_taxonomy: Total rows added: 4 in 0.01 seconds
+0051.969 (0) Table ex_term_taxonomy: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_term_taxonomy.table.gz - 0.4 Kb)
+0052.036 (0) Table ex_terms: Total expected rows (approximate): 4
+0052.046 (0) Table ex_terms: Total rows added: 4 in 0.01 seconds
+0052.049 (0) Table ex_terms: finishing file (backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_terms.table.gz - 0.4 Kb)
+0052.057 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_options.table.gz (1/11): adding to final database dump
+0052.095 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_users.table.gz (2/11): adding to final database dump
+0052.097 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_usermeta.table.gz (3/11): adding to final database dump
+0052.099 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_commentmeta.table.gz (4/11): adding to final database dump
+0052.100 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_comments.table.gz (5/11): adding to final database dump
+0052.101 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_links.table.gz (6/11): adding to final database dump
+0052.103 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_postmeta.table.gz (7/11): adding to final database dump
+0052.109 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_posts.table.gz (8/11): adding to final database dump
+0052.125 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_term_relationships.table.gz (9/11): adding to final database dump
+0052.127 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_term_taxonomy.table.gz (10/11): adding to final database dump
+0052.129 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db-table-ex_terms.table.gz (11/11): adding to final database dump
+0052.130 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db.gz: finished writing out complete database file (160 Kb)
+0052.137 (0) Total database tables backed up: 11 (backup_2015-07-08-1207_EDEX_922b17d00ec6-db.gz, size: 194510, checksum (SHA1): 6343987d5c961f5514cbbf6869e8fd59b8b2636f)
+0052.139 (0) Saving backup history
+0052.148 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0052.149 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0052.150 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0052.151 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-others.zip: others: This file has not yet been successfully uploaded: will queue
+0052.152 (0) backup_2015-07-08-1207_EDEX_922b17d00ec6-db.gz: db: This file has not yet been successfully uploaded: will queue
+0052.155 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0052.159 (0) Cloud backup selection (1/1): none (last)
+0052.160 (0) No remote despatch: user chose no remote backup service
+0052.164 (0) Recording as successfully uploaded: backup_2015-07-08-1207_EDEX_922b17d00ec6-plugins.zip (ab18e180c2542f17912c302d0d72afe7)
+0052.172 (0) Recording as successfully uploaded: backup_2015-07-08-1207_EDEX_922b17d00ec6-themes.zip (a77c7565ea8c052ba7d13154439e9387)
+0052.177 (0) Recording as successfully uploaded: backup_2015-07-08-1207_EDEX_922b17d00ec6-uploads.zip (302cf8f8c8a14fce5a32daeaec2e2b2a)
+0052.184 (0) Recording as successfully uploaded: backup_2015-07-08-1207_EDEX_922b17d00ec6-others.zip (01f936c069ce67719ac9f271d1ff8398)
+0052.191 (0) Recording as successfully uploaded: backup_2015-07-08-1207_EDEX_922b17d00ec6-db.gz (9fee001ddfae9c4e876e83c5da6233e0)
+0052.200 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=5, retain_db=5
+0052.202 (0) Number of backup sets in history: 2
+0052.204 (0) Examining backup set with datestamp: 1436357271 (Jul 08 2015 12:07:51)
+0052.207 (0) 1436357271: this backup set remains non-empty (1/1); will retain in history
+0052.208 (0) Examining backup set with datestamp: 1436260082 (Jul 07 2015 09:08:02)
+0052.210 (0) 1436260082: this backup set remains non-empty (1/1); will retain in history
+0052.212 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0052.216 (0) Resume backup (922b17d00ec6, 0): finish run
+0052.218 (0) Decremented the semaphore (fd) by 1
+0052.220 (0) Semaphore (fd) unlocked
+0052.221 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0052.226 (0) No email will/can be sent - the user has not configured an email address.
+0052.227 (0) The backup apparently succeeded and is now complete

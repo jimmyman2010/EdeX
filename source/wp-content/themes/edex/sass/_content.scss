@@ -329,7 +329,18 @@
     &.slick-slider {
         margin: 0;
     }
+    .cs-item-content{
+        > *{
+            margin-bottom: 20px;
+        }
+    }
     .item{
+        padding: 0 50px;
+        text-align: center;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 26px;
+        color: #2D4243;
         ul{
             margin: 0;
             padding: 0;
@@ -370,10 +381,11 @@
             height: auto;
             width: auto;
             margin: 0;
+            overflow: hidden;
             button{
                 text-indent: -999px;
                 display: inline-block;
-                background: url(images/icons/icon-sprite.png) no-repeat -493px -58px;
+                background: url(images/icons/icon-sprite.png) no-repeat -493px -177px;
                 width:18px;
                 height:18px;
                 overflow: hidden;
@@ -381,7 +393,7 @@
             }
             &.slick-active{
                 button{
-                    background-position: -526px -58px;
+                    background-position: -526px -177px;
                 }
             }
         }

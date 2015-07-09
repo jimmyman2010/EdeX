@@ -32,10 +32,11 @@
 						<!-- /logo -->
 						<div class="top-nav">
 							<div class="navbar-social">
-								<a class="fa fa-facebook" href="#"></a>
+							
 								<a class="fa fa-twitter" href="#"></a>
+                                <a class="fa fa-linkedin" href="#"></a>
 								<a class="fa fa-rss" href="#"></a>
-								<a class="fa fa-google-plus" href="#"></a>
+								
 							</div>
 							<div class="contact-us">
 								<a href="<?php echo get_page_link(29); ?>">Contact us</a>

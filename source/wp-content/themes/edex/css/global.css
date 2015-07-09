@@ -887,22 +887,35 @@ main {
   margin: 0;
 }
 /* line 333, ../sass/_content.scss */
+.content-slider .cs-item-content > * {
+  margin-bottom: 20px;
+}
+/* line 337, ../sass/_content.scss */
+.content-slider .item {
+  padding: 0 50px;
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 26px;
+  color: #2D4243;
+}
+/* line 344, ../sass/_content.scss */
 .content-slider .item ul {
   margin: 0;
   padding: 0;
 }
-/* line 336, ../sass/_content.scss */
+/* line 347, ../sass/_content.scss */
 .content-slider .item ul li {
   position: relative;
   padding-left: 34px;
   margin-top: 15px;
   list-style: none;
 }
-/* line 341, ../sass/_content.scss */
+/* line 352, ../sass/_content.scss */
 .content-slider .item ul li:first-child {
   margin-top: 0;
 }
-/* line 344, ../sass/_content.scss */
+/* line 355, ../sass/_content.scss */
 .content-slider .item ul li:before {
   position: absolute;
   top: 0;
@@ -914,40 +927,41 @@ main {
   background: url(images/icons/icon-sprite.png) no-repeat -361px -23px;
   background-size: 380px auto;
 }
-/* line 356, ../sass/_content.scss */
+/* line 367, ../sass/_content.scss */
 .content-slider .item ol li {
   margin-top: 15px;
 }
-/* line 358, ../sass/_content.scss */
+/* line 369, ../sass/_content.scss */
 .content-slider .item ol li:first-child {
   margin-top: 0;
 }
-/* line 364, ../sass/_content.scss */
+/* line 375, ../sass/_content.scss */
 .content-slider .slick-dots {
   position: static;
   bottom: auto;
   padding: 10px 0;
   margin: 0;
 }
-/* line 369, ../sass/_content.scss */
+/* line 380, ../sass/_content.scss */
 .content-slider .slick-dots li {
   height: auto;
   width: auto;
   margin: 0;
+  overflow: hidden;
 }
-/* line 373, ../sass/_content.scss */
+/* line 385, ../sass/_content.scss */
 .content-slider .slick-dots li button {
   text-indent: -999px;
   display: inline-block;
-  background: url(images/icons/icon-sprite.png) no-repeat -493px -58px;
+  background: url(images/icons/icon-sprite.png) no-repeat -493px -177px;
   width: 18px;
   height: 18px;
   overflow: hidden;
   margin: 10px 4px;
 }
-/* line 383, ../sass/_content.scss */
+/* line 395, ../sass/_content.scss */
 .content-slider .slick-dots li.slick-active button {
-  background-position: -526px -58px;
+  background-position: -526px -177px;
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
@@ -1348,28 +1362,37 @@ main {
     left: 22px;
   }
 
-  /* line 298, ../sass/_tablet.scss */
+  /* line 297, ../sass/_tablet.scss */
+  .content-slider .cs-item-content > * {
+    margin-bottom: 15px;
+  }
+  /* line 301, ../sass/_tablet.scss */
+  .content-slider .item {
+    padding: 0 120px;
+    font-size: 18px;
+  }
+  /* line 305, ../sass/_tablet.scss */
   .content-slider .item ul li {
     padding-right: 20px;
   }
-  /* line 303, ../sass/_tablet.scss */
+  /* line 310, ../sass/_tablet.scss */
   .content-slider .item ol li {
     padding-right: 20px;
   }
 
-  /* line 311, ../sass/_tablet.scss */
+  /* line 318, ../sass/_tablet.scss */
   .footer .logo-bottom {
     padding: 40px 0 28px;
   }
-  /* line 313, ../sass/_tablet.scss */
+  /* line 320, ../sass/_tablet.scss */
   .footer .logo-bottom img {
     height: 80px;
   }
-  /* line 318, ../sass/_tablet.scss */
+  /* line 325, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation {
     position: relative;
   }
-  /* line 320, ../sass/_tablet.scss */
+  /* line 327, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation .navbar-collapse {
     background-color: inherit;
     bottom: -60px;
@@ -1377,27 +1400,27 @@ main {
     width: auto;
     right: 0;
   }
-  /* line 326, ../sass/_tablet.scss */
+  /* line 333, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation .navbar-collapse ul {
     margin: inherit;
   }
-  /* line 329, ../sass/_tablet.scss */
+  /* line 336, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation .navbar-collapse li {
     width: auto;
     padding: 0 0 0 15px;
     border-top: none;
   }
-  /* line 333, ../sass/_tablet.scss */
+  /* line 340, ../sass/_tablet.scss */
   .footer .rabel-bottom .navigation .navbar-collapse li a {
     padding: 15px 0;
     color: white;
     font-weight: bold;
   }
-  /* line 342, ../sass/_tablet.scss */
+  /* line 349, ../sass/_tablet.scss */
   .footer .navbar-footer {
     margin: 0;
   }
-  /* line 344, ../sass/_tablet.scss */
+  /* line 351, ../sass/_tablet.scss */
   .footer .navbar-footer .navbar-brand {
     padding: 12px 0;
   }
