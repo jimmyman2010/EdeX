@@ -143,6 +143,39 @@ main{
                 display: none;
             }
         }
+        h1{
+            font-size: 26px;
+            font-weight: bold;
+            border-bottom: 1px solid #e6e6e6;
+            color: #065e61;
+            padding: 0 0 10px;
+            margin: 0 0 30px;
+        }
+        article{
+            margin-top: 40px;
+            @include clearfix;
+            .blog-list{
+                float: left;
+                @include border-radius(150px);
+                overflow: hidden;
+                margin: 0 20px 15px 0;
+            }
+            h2{
+                font-family: Orbitron-Regular,sans-serif;
+                margin-top: 0;
+                line-height: 32px;
+                a{
+                    color: #065e62;
+                    &:hover{
+                        text-decoration: none;
+                        color: #04b6b7;
+                    }
+                }
+            }
+            .date, .author, .categories{
+                font-size: 14px;
+            }
+        }
     }
 }
 
@@ -223,7 +256,7 @@ main{
 
 /* footer */
 .footer {
-    margin-top: 10px;
+    margin-top: 30px;
     .logo-bottom{
         background-color: white;
         text-align: center;

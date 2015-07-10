@@ -255,7 +255,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 function html5_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    return '<a class="view-article" href="' . get_permalink($post->ID) . '">' . __('Read full post', 'html5blank') . '</a>';
 }
 
 // Remove Admin bar
@@ -635,4 +635,9 @@ class My_Widget_Recent_Posts extends WP_Widget {
             <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
     <?php
     }
+}
+
+add_action( 'after_setup_theme', 'edex_theme_setup' );
+function edex_theme_setup() {
+    add_image_size( 'blog-list', 145, 145, true );
 }
