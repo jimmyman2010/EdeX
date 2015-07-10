@@ -157,6 +157,16 @@ main{
             padding: 10px 0 30px;
             text-align: center;
             @include clearfix;
+            a{
+                color: #030303;
+                text-decoration: none;
+            }
+            span{
+                color:#777;
+            }
+            .page-numbers{
+                padding: 0 3px;
+            }
             .prev{
                 float: left;
             }
