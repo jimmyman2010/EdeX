@@ -218,6 +218,8 @@ function html5wp_pagination()
         'base' => str_replace($big, '%#%', get_pagenum_link($big)),
         'format' => '?paged=%#%',
         'current' => max(1, get_query_var('paged')),
+        'prev_text' => __('&#8592; Newer'),
+        'next_text' => __('Older &#8594;'),
         'total' => $wp_query->max_num_pages
     ));
 }
@@ -225,13 +227,13 @@ function html5wp_pagination()
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
-    return 20;
+    return 45;
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
 function html5wp_custom_post($length)
 {
-    return 40;
+    return 45;
 }
 
 // Create the Custom Excerpts callback
@@ -255,7 +257,8 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 function html5_blank_view_article($more)
 {
     global $post;
-    return '<a class="view-article" href="' . get_permalink($post->ID) . '">' . __('Read full post', 'html5blank') . '</a>';
+    //return '... <br/><a class="view-article" href="' . get_permalink($post->ID) . '">' . __('Read full post', 'html5blank') . '</a>';
+    return '...';
 }
 
 // Remove Admin bar
@@ -626,7 +629,6 @@ class My_Widget_Recent_Posts extends WP_Widget {
     public function form( $instance ) {
         $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
-        $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
         ?>
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>

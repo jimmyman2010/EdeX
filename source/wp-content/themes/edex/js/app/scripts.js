@@ -6,8 +6,11 @@
 		var navbar = $('.navbar-move'),
 			body = $('body');
 		var offsetPixels = navbar.offset().top;
+		if($(window).width() > 768) {
+			offsetPixels += 60;
+		}
 
-		$(window).scroll(function() {
+		$(window).on('load scroll', function() {
 			if ($(window).scrollTop() > offsetPixels) {
 				navbar.addClass('fixed');
 				body.addClass('navbar-fixed');

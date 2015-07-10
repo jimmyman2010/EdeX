@@ -1,3 +1,9 @@
+.breadcrumb {
+    padding: 0 0 30px;
+    >li+li:before{
+        padding: 0 6px;
+    }
+}
 .header {
     .top-header{
         text-align: left;
@@ -68,8 +74,32 @@
     }
 }
 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes menudown {
+    0%   {top: -60px;}
+    100% {top: 0;}
+}
+
+/* Standard syntax */
+@keyframes menudown {
+    0%   {top: -60px;}
+    100% {top: 0;}
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes logodown {
+    0%   {top: -65px;}
+    100% {top: 5px;}
+}
+
+/* Standard syntax */
+@keyframes logodown {
+    0%   {top: -65px;}
+    100% {top: 5px;}
+}
+
 .navbar-move.fixed{
     background-color: #000011;
+    @include animation(menudown .5s);
     .navigation .navbar-collapse {
         width: 1170px;
         margin: 0 auto;
@@ -88,6 +118,7 @@
             position: fixed;
             z-index: 1030;
             top: 5px;
+            @include animation(logodown .5s);
             img {
                 height: 45px;
             }
@@ -96,6 +127,7 @@
             position: fixed;
             z-index: 1040;
             top: 0;
+            @include animation(menudown .5s);
             right: auto;
             bottom: auto;
             margin-top: 8px;
@@ -118,6 +150,42 @@ main{
                 margin-left: 15px;
                 border-right: 1px solid #e6e6e6;
                 padding-right: 24px;
+            }
+        }
+        h1{
+            margin: 0 0 30px;
+        }
+        article{
+            margin-top: 40px;
+            @include clearfix;
+            .blog-list{
+                float: left;
+                margin: 0 20px 15px 0;
+            }
+            h2{
+                font-size: 30px;
+                line-height: 32px;
+            }
+            .title-area{
+                display: table-cell;
+                height: 145px;
+                vertical-align: middle;
+            }
+            .body{
+                font-size: 15px;
+                line-height: 23px;
+            }
+            .extra-links{
+                padding: 18px 5px 30px;
+            }
+            .date, .author, .categories{
+                font-size: 14px;
+            }
+            .summary{
+                margin: 7px 0 0 165px;
+            }
+            .view-article{
+                margin: 0 0 10px;
             }
         }
     }

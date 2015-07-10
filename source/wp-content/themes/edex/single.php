@@ -1,67 +1,81 @@
 <?php get_header(); ?>
 
-	<main role="main">
-	<!-- section -->
-	<section>
+<main role="main" class="has-sidebar">
+	<div class="container">
+		<!-- section -->
+		<section>
+			<ul class="breadcrumb">
+				<li><a href="<?php echo home_url(); ?>">Home</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><?php the_category(', '); ?></li>
+				<li><span><?php the_title(); ?></span></li>
+			</ul>
+			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<h1>Blog: <?php the_category(', '); ?></h1>
+				<!-- article -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header>
+						<!-- post thumbnail -->
+						<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+							<span class="blog-list">
+								<?php echo get_the_post_thumbnail(null, 'blog-list'); ?>
+							</span>
+						<?php endif; ?>
+						<!-- /post thumbnail -->
+						<div class="title-area">
+							<!-- post title -->
+							<h2><?php the_title(); ?></h2>
+							<!-- /post title -->
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<!-- post details -->
+							<span class="date"><?php _e( 'Post on', 'html5blank' ); ?> <?php the_time('j F Y'); ?></span>
+							<span class="author"><?php _e( 'by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+							<span class="categories"><?php _e( 'in', 'html5blank' ); ?> <?php the_category(', '); ?></span>
+							<!-- /post details -->
+						</div>
+					</header>
+					<br clear="all"/>
+					<div class="body">
+						<?php the_content(); // Dynamic Content ?>
+					</div>
+					<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+					<div class="social">
+						<span class='st_facebook_hcount' displayText='Facebook'></span>
+						<span class='st_twitter_hcount' displayText='Tweet'></span>
+						<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+						<span class='st_googleplus_hcount' displayText='Google +'></span>
+						<span class='st_pinterest_hcount' displayText='Pinterest'></span>
+						<span class='st_email_hcount' displayText='Email'></span>
+					</div>
+					<nav class="extra-links">
+						<?php echo get_previous_post_link('%link', '&#8592; Previous'); ?>
+						<?php echo get_next_post_link('%link', 'Newer &#8594;'); ?>
+					</nav>
+				</article>
+				<!-- /article -->
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
+			<?php endwhile; ?>
+
+			<?php else: ?>
+
+				<!-- article -->
+				<article>
+
+					<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+
+				</article>
+				<!-- /article -->
+
 			<?php endif; ?>
-			<!-- /post thumbnail -->
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+		</section>
+		<!-- /section -->
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
-
-			<?php the_content(); // Dynamic Content ?>
-
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
-			<?php comments_template(); ?>
-
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
-
-	<?php else: ?>
-
-		<!-- article -->
-		<article>
-
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
-	</section>
-	<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
+		<?php get_sidebar(); ?>
+	</div>
+</main>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "f5aa822b-dd9d-40c5-ab1d-949e4ccb9e9c", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 <?php get_footer(); ?>

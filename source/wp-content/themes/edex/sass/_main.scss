@@ -93,7 +93,7 @@ textarea{
 .breadcrumb{
     color: #030303;
     background: none;
-    padding: 0 0 30px;
+    padding: 10px 0;
     font-size: 13px;
     a{
         color: #065ea5;
@@ -101,6 +101,7 @@ textarea{
     >li+li:before{
         color: #030303;
         content: '>';
+        padding: 0 2px;
     }
 }
 

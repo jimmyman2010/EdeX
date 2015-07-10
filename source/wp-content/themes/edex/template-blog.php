@@ -3,7 +3,7 @@
 <main role="main" class="has-sidebar">
     <div class="container">
         <!-- section -->
-        <section>
+        <section class="listing">
             <ul class="breadcrumb">
                 <li><a href="<?php echo home_url(); ?>">Home</a></li>
                 <li><span>Blog</span></li>

@@ -22,10 +22,10 @@
 		<span class="author"><?php _e( 'by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
         <span class="categories"><?php _e( 'in', 'html5blank' ); ?> <?php the_category(', '); ?></span>
 		<!-- /post details -->
-
-		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
-
-		<?php edit_post_link(); ?>
+		<div class="summary">
+			<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+		</div>
+		<a class="view-article" href="<?php the_permalink(); ?>">Read full post</a>
 
 	</article>
 	<!-- /article -->
