@@ -166,6 +166,16 @@ main{
             }
             .page-numbers{
                 padding: 0 3px;
+                line-height: 36px;
+            }
+            .prev, .next{
+                padding: 6px 15px;
+                border-radius: 10px;
+                line-height: inherit;
+                &:hover{
+                    background: #095760;
+                    color: #fff;
+                }
             }
             .prev{
                 float: left;
@@ -209,15 +219,24 @@ main{
             }
             .extra-links{
                 border-top: 1px solid #e6e6e6;
-                padding: 10px 0 30px;
+                padding: 3px 0 30px;
                 @include clearfix;
+                a{
+                    padding: 6px 15px;
+                    border-radius: 10px;
+                    line-height: inherit;
+                    color: #050505;
+                    text-decoration: none;
+                    &:hover{
+                        background: #095760;
+                        color: #fff;
+                    }
+                }
                 a[rel="prev"]{
                     float: left;
-                    color: #050505;
                 }
                 a[rel="next"]{
                     float: right;
-                    color: #050505;
                 }
             }
             .date, .author, .categories{

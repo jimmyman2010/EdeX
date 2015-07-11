@@ -214,6 +214,9 @@ function html5wp_pagination()
 {
     global $wp_query;
     $big = 999999999;
+    if($wp_query->max_num_pages > 1) {
+        echo '<div class="pagination">';
+    }
     echo paginate_links(array(
         'base' => str_replace($big, '%#%', get_pagenum_link($big)),
         'format' => '?paged=%#%',
@@ -222,6 +225,9 @@ function html5wp_pagination()
         'next_text' => __('Older &#8594;'),
         'total' => $wp_query->max_num_pages
     ));
+    if($wp_query->max_num_pages > 1) {
+        echo '</div>';
+    }
 }
 
 // Custom Excerpts
