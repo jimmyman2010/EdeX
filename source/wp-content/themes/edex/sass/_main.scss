@@ -105,6 +105,21 @@ textarea{
     }
 }
 
+.my-link{
+    font: 23px Orbitron-Regular,sans-serif;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px 0;
+    @include background-image(linear-gradient(to right, #10b7ad, #0eb7b2, #0eb8b8, #11b6ba));
+    &:hover{
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
 @media (min-width: 768px) {
     .wrapper {
         width: 1170px;

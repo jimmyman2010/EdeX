@@ -352,6 +352,16 @@ main{
                 color: #04b6b7;
             }
         }
+        .my_widget_social{
+            display: none;
+            .navbar-social{
+                a{
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
     }
 }
 
