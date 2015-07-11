@@ -1,3 +1,27 @@
+.alignnone {
+    margin:5px 20px 20px 0;
+}
+.alignright {
+    float:right;
+    margin:5px 0 20px 20px;
+}
+.alignleft {
+    float:left;
+    margin:5px 20px 20px 0;
+}
+a img {
+    &.alignright {
+        float: right;
+        margin: 5px 0 20px 20px;
+    }
+    &.alignnone {
+        margin:5px 20px 20px 0;
+    }
+    &.alignleft {
+        float:left;
+        margin:5px 20px 20px 0;
+    }
+}
 .breadcrumb {
     padding: 0 0 30px;
     >li+li:before{
@@ -163,8 +187,8 @@ main{
                 margin: 0 20px 15px 0;
             }
             h2{
-                font-size: 30px;
-                line-height: 32px;
+                font-size: 32px;
+                line-height: 34px;
             }
             .title-area{
                 display: table-cell;
@@ -172,8 +196,13 @@ main{
                 vertical-align: middle;
             }
             .body{
-                font-size: 15px;
-                line-height: 23px;
+                h1{
+                    font-size: 26px;
+                }
+                h2{
+                    font-size: 24px;
+                    line-height: 29px;
+                }
             }
             .extra-links{
                 padding: 10px 5px 30px;

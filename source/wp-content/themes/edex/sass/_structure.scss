@@ -195,10 +195,11 @@ main{
                 }
             }
             h2{
-                font-family: Orbitron-Regular,sans-serif;
-                font-size: 24px;
+                font-family: Orbitron-Medium,sans-serif;
+                font-weight: normal;
+                font-size: 26px;
                 margin: 0 0 5px;
-                line-height: 26px;
+                line-height: 28px;
                 a{
                     color: #065e62;
                     &:hover{
@@ -210,6 +211,29 @@ main{
             .body{
                 font-size: 15px;
                 line-height: 23px;
+                h1{
+                    color: #065e61;
+                    font-family: Orbitron-Medium,sans-serif;
+                    font-size: 22px;
+                    font-weight: normal;
+                    padding: 0;
+                    border: none;
+                    margin: 30px 0 15px;
+                }
+                h2{
+                    font-family: Opensans-Regular, sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 25px;
+                    margin: 20px 0 10px;
+                    color: #04b6b7;
+                }
+                h3{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 22px;
+                    color: #0670ab;
+                }
             }
             .social{
                 margin: 40px 0;
