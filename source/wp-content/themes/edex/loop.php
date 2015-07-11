@@ -24,8 +24,8 @@
 		<!-- /post details -->
 		<div class="summary">
 			<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+            <a class="view-article" href="<?php the_permalink(); ?>">Read full post</a>
 		</div>
-		<a class="view-article" href="<?php the_permalink(); ?>">Read full post</a>
 
 	</article>
 	<!-- /article -->
