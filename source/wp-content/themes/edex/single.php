@@ -14,7 +14,11 @@
 
 				<h1>Blog: <?php the_category(', '); ?></h1>
 				<!-- article -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php
+				$etCls = '';
+				if ( has_post_thumbnail()){ $etCls = 'has-thumbnail';}
+				?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class($etCls); ?>>
 					<header>
 						<!-- post thumbnail -->
 						<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>

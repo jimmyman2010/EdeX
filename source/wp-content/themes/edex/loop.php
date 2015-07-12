@@ -1,7 +1,10 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
+	<?php
+	$etCls = '';
+	if ( has_post_thumbnail()){ $etCls = 'has-thumbnail';}
+	?>
 	<!-- article -->
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class($etCls); ?>>
 
 		<!-- post thumbnail -->
 		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>

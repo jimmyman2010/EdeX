@@ -324,7 +324,6 @@ $(document).ready(function(){
 
     $(window).on('load resize', function(){
         var elements = $(".wheel-slide-content .wpb_content_element");
-        console.log(elements);
         var maxHeight = Math.max.apply(null, elements.map(function ()
         {
             return $(this).height();
