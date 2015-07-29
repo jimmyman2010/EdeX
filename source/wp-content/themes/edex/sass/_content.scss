@@ -24,7 +24,7 @@
         white-space: nowrap;
         i{
             width:29px; height:29px;
-            background: url(images/icons/icon-sprite.png) no-repeat -571px -38px;
+            background: url(../images/icons/icon-sprite.png) no-repeat -571px -38px;
             vertical-align: middle;
             margin-right: 8px;
         }
@@ -91,7 +91,7 @@
             content: ' ';
             display: block;
             width:28px; height:37px;
-            background: url(images/icons/icon-sprite.png) no-repeat -511px 0;
+            background: url(../images/icons/icon-sprite.png) no-repeat -511px 0;
             position: absolute;
             right:-20px;
             top: 50%;
@@ -124,7 +124,7 @@
                     display: block;
                     width: 53px;
                     height: 53px;
-                    background: url(images/icons/icon-sprite.png) no-repeat;
+                    background: url(../images/icons/icon-sprite.png) no-repeat;
                     @include background-size(300px auto);
                 }
                 &.icon-seo{
@@ -206,7 +206,7 @@
                         content: ' ';
                         display: block;
                         width:9px; height:15px;
-                        background: url(images/icons/icon-sprite.png) no-repeat -592px -88px;
+                        background: url(../images/icons/icon-sprite.png) no-repeat -592px -88px;
                     }
                 }
             }
@@ -215,7 +215,7 @@
             a{
                 text-indent: -999px;
                 display: inline-block;
-                background: url(images/icons/icon-sprite.png) no-repeat -493px -58px;
+                background: url(../images/icons/icon-sprite.png) no-repeat -493px -58px;
                 width:18px;
                 height:18px;
                 overflow: hidden;
@@ -240,7 +240,7 @@
                 content: ' ';
                 display:block;
                 width:29px; height:29px;
-                background: url(images/icons/icon-sprite.png) no-repeat -571px -38px;
+                background: url(../images/icons/icon-sprite.png) no-repeat -571px -38px;
             }
             &:hover{
                 text-decoration: none;
@@ -294,7 +294,7 @@
         ol.vc_carousel-indicators {
             bottom: -30px;
             li{
-                background: url(images/icons/icon-sprite.png) no-repeat -493px -177px;
+                background: url(../images/icons/icon-sprite.png) no-repeat -493px -177px;
                 width:18px;
                 height:18px;
                 overflow: hidden;
@@ -392,7 +392,7 @@
                     content: ' ';
                     display:block;
                     width:22px; height:22px;
-                    background: url(images/icons/icon-sprite.png) no-repeat -361px -23px;
+                    background: url(../images/icons/icon-sprite.png) no-repeat -361px -23px;
                     background-size: 380px auto;
                 }
             }
@@ -419,7 +419,7 @@
             button{
                 text-indent: -999px;
                 display: inline-block;
-                background: url(images/icons/icon-sprite.png) no-repeat -493px -177px;
+                background: url(../images/icons/icon-sprite.png) no-repeat -493px -177px;
                 width:18px;
                 height:18px;
                 overflow: hidden;

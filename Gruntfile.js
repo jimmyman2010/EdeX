@@ -43,7 +43,13 @@ module.exports = function(grunt) {
 					'important': false,
 					'font-sizes': false,
 					'duplicate-background-images': false,
-					'text-indent': false
+					'text-indent': false,
+					'unique-headings': false,
+					'regex-selectors': false,
+					'universal-selector': false,
+					'errors': false,
+					'adjoining-classes': false,
+					'qualified-headings': false
 				},
 				src: ['source/wp-content/themes/edex/css/global.css']
 			}
@@ -56,7 +62,7 @@ module.exports = function(grunt) {
 					\n\tDescription: EdeX base on HTML5 Blank WordPress Theme\
 					\n\tVersion: 0.1.0\
 					\n\tAuthor: Jimmy Man (@JimmyMan2010)\
-					\n\tAuthor URI: http://emeien.com\
+					\n\tAuthor URI: http://www.mantrantd.com\
 					\n\tTags: HTML5, CSS3\
 					\n\
 					\n\tLicense: MIT\
@@ -64,7 +70,7 @@ module.exports = function(grunt) {
 					\n*/'
 				},
 				files: {
-					'source/wp-content/themes/edex/style.css': ['source/wp-content/themes/edex/css/global.css']
+					'source/wp-content/themes/edex/css/global.min.css': ['source/wp-content/themes/edex/css/global.css']
 				}
 			},
 			plugins: {
@@ -114,6 +120,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-less');
 
-	grunt.registerTask('default', ['jshint', 'uglify', 'compass', 'csslint', 'cssmin']);
+	grunt.registerTask('default', ['jshint', 'uglify', 'compass', 'cssmin']);
 
 };

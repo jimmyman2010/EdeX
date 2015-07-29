@@ -106,12 +106,12 @@ function edexScripts()
         );
         wp_deregister_script('jquery');
 
-        wp_register_script('jquery', get_template_directory_uri() . '/js/lib.min.js', array(), '0.1.1');
+        wp_register_script('jquery', get_template_directory_uri() . '/js/lib.min.js', array(), '0.1.2');
 
-        wp_register_script('pluginsscript', get_template_directory_uri() . '/js/plugins.min.js', array(), '0.1.1', true);
+        wp_register_script('pluginsscript', get_template_directory_uri() . '/js/plugins.min.js', array(), '0.1.2', true);
         wp_enqueue_script('pluginsscript'); // Enqueue it!
 
-        wp_register_script('edexscript', get_template_directory_uri() . '/js/global.min.js', array(), '0.1.1', true);
+        wp_register_script('edexscript', get_template_directory_uri() . '/js/global.min.js', array(), '0.1.2', true);
         wp_enqueue_script('edexscript'); // Enqueue it!
     }
 }
@@ -119,10 +119,13 @@ function edexScripts()
 // Load HTML5 Blank styles
 function edexStyles()
 {
-    wp_register_style('pluginscss', get_template_directory_uri() . '/css/plugins.min.css', array(), '0.1.1', 'all');
+    wp_register_style('pluginscss', get_template_directory_uri() . '/css/plugins.min.css', array(), '0.1.2', 'all');
     wp_enqueue_style('pluginscss'); // Enqueue it!
 
-    wp_register_style('edexcss', get_template_directory_uri() . '/style.css', array(), '0.1.1', 'all');
+    wp_register_style('globalcss', get_template_directory_uri() . '/css/global.min.css', array(), '0.1.2', 'all');
+    wp_enqueue_style('globalcss'); // Enqueue it!
+
+    wp_register_style('edexcss', get_template_directory_uri() . '/style.css', array(), '0.1.2', 'all');
     wp_enqueue_style('edexcss'); // Enqueue it!
 }
 
