@@ -9,7 +9,15 @@ $link_setting = empty($settings[0]) ? '' : $settings[0];
 </h2>
 <?php elseif($block === 'image' && !empty($post->thumbnail)): ?>
 <div class="post-thumb">
-    <?php echo empty($link_setting) || $link_setting!='no_link' ? $this->getLinked($post, $post->thumbnail, $link_setting, 'link_image') : $post->thumbnail ?>
+    <?php if($post->post_type === 'testimonial') {
+        $official = get_post_meta( $post->id, '_boxlink_value_key', true );
+        ?>
+        <a class="testimonial-logo" href="<?= $official ? $official : 'javascript:;' ?>" target="_blank">
+            <?= $post->thumbnail ?>
+        </a>
+    <?php } else { ?>
+        <?php echo empty($link_setting) || $link_setting!='no_link' ? $this->getLinked($post, $post->thumbnail, $link_setting, 'link_image') : $post->thumbnail ?>
+    <?php } ?>
 </div>
 <?php elseif($block === 'text'): ?>
 <div class="entry-content">
