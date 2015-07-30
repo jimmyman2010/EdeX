@@ -528,3 +528,8 @@ add_filter('pre_site_transient_update_themes','remove_core_updates');
 require_once 'widgets/MyRecentPost.php';
 require_once 'widgets/MyLink.php';
 require_once 'widgets/MySocial.php';
+
+/*------------------------------------*\
+	My MetaBox
+\*------------------------------------*/
+require_once 'metabox/BoxLink.php';
